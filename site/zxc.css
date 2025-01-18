@@ -1,14 +1,4 @@
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  font-size: 20px;
-  font-family: 'Lobster', cursive;
-  background-color: #1f0707;
-  color: white;
-}
-
-/* Верхняя панель */
+/* Красивая кнопка */
 .button {
 
   position: relative;
@@ -101,31 +91,37 @@ body {
       110% 10%;
       background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
+
+
 }
-.baza{
+
+
+ /* основные стили страницы */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    background-color: #1f0707;
+    color: white;
+}
+
+.header{
   display: flex;
   flex: 1;
 }
-.zxc{
-  color: #a6780a;
-  font-weight: normal;
-  text-align: center;
-  text-align: center;
-  font-family: Comic Sans MS, Comic Sans, cursive;
-  -webkit-text-stroke: 0.3px #FFFFFF;
-}
-.Society{text-align: left;}
-.up_panel{text-align: right;}
-.up_panel, .Society, .zxc{
+
+.up_panel{text-align: center;}
+.up_panel_left{text-align: left;}
+.up_panel_rigth{text-align: right; padding-right: 10px;}
+.up_panel,.up_panel_rigth,.up_panel_left{
   color: white;
   background-color: #7d2ae8;
   border-bottom: 4px solid black;
   flex-grow: 1;
   width: 50%;
 }
-
-/* Нижние четыре блока */
-
 
 .first, .second, .third, .forth {
   flex: 1;
@@ -139,21 +135,10 @@ body {
 }
 
 
-
 p{
   font-size: 25px;
 }
 
-
-
-
-.lol{
-  height: 50%;
-}
-
-.lol1{
-  height: 85%;
-}
 
 button{
   height: 65px;
@@ -164,8 +149,8 @@ button{
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Важное изменение */
-  gap: 10px; /* Уменьшил gap */
+  justify-content: flex-start; 
+  gap: 10px; 
   padding: 20px;
   background-color: #1f0707;
   box-sizing: border-box;
@@ -179,14 +164,11 @@ button{
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.Uno{flex: 1 1 calc(45% - 20px);}
+.Dos{flex: 1 1 calc(55% - 20px);}
 
-.Uno{
-  flex: 1 1 calc(45% - 20px);
-}
-.Dos{
-  flex: 1 1 calc(55% - 20px);
-}
 .Uno img {
   max-width: 100%;
   height: auto;
 }
+
