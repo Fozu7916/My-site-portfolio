@@ -98,14 +98,13 @@
 
  /* основные стили страницы */
 body {
-    background-image: url("background.jpeg");
+    background-image: url("../images/background.jpeg");
     background-size: cover;
     margin: 0;
     padding: 0;
     height: 100vh; 
     font-size: clamp(6px, 1.8vh, 40px);
     font-family: 'Lobster', cursive;
-    background-color: #1f0707;
     color: white;
 }
 
@@ -130,18 +129,13 @@ p{
 
 .first, .second, .third, .forth {
   flex: 1;
-  height: 78vh;
   padding: 30px;
   background-color: #080404b0;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  border-radius: 38px;
   box-sizing: border-box;
 }
-
-
-
-
 
 button{
   height: 65px;
@@ -161,37 +155,24 @@ button{
 .Uno,.Uno1,.Dos1,.Dos,.Uno2 {
   background-color: #080404b0;
   color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 15px;
+  border-radius: 38px;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 78vh;
 }
 .Uno{flex: 1 1 calc(45% - 20px);}
 .Dos{flex: 1 1 calc(55% - 20px);}
-.Uno1,.Uno2{height: clamp(600px,75vh,900px);width:clamp(200px,35vw,450px);text-align: center;font-size: 20px;}
-.Dos1{height: clamp(600px, 75vh,900px);width:clamp(200px,60vw,1900px);text-align: center;font-size: 20px;}
-.Uno1 img { width:clamp(25%,65%,100%);height: auto;}
-.Uno1 p,.Dos1 p,.Uno2 p {font-size: clamp(2px,5vw,26px)}
+.Uno1{width: 15rem;}
+.Dos1{flex: 1 1 calc(55% - 20px);}
+.Uno1,.Uno2{text-align: center;}
+.Dos1{text-align: center;}
 .Uno img {max-width: 100%; height: auto;}
 a{color:white}
 footer{background-color: #080404b0; color: #fff; text-align: center; padding: 10px; margin-top: 20px;}
-@media (max-width: 768px)
-{
-  .Uno1 p,.Dos1 p,.Uno2 p {font-size: clamp(9px,2vh,14px);}
-  .Uno1,.Dos1,.Uno2{height: clamp(100px, 65vh,800px);width:clamp(100px,85vw,900px);}
-  .Uno1,.Uno2{height: clamp(450px, 35vh,800px)}
-  .Uno img {width: 40%; height: auto;}
-}
-@media (min-width: 1600px)
-{
-  .Uno1 p,.Dos1 p,.Uno2 p {font-size: clamp(18px,5vh,36px);}
-}
 .container-devlog{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 78vh; /* или 100vh, в зависимости от вашего макета */
    padding: 20px;
   box-sizing: border-box;
 }
