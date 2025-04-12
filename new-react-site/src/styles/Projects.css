@@ -5,6 +5,8 @@ body {
   padding: 0;
   min-height: 100vh;
   color: white;
+  position: relative;
+  padding-bottom: 60px; /* Для футера */
 }
 
 .container {
@@ -15,6 +17,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   border-radius: 1.5rem;
+  max-width: 100%;
 }
 
 .first,
@@ -22,16 +25,16 @@ body {
 .third,
 .forth {
   flex: 1;
-  padding: 30px;
+  padding: 20px;
   background-color: #080404b0;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 1.5rem;
   box-sizing: border-box;
-  margin-left: 15px;
-  margin-right: 15px;
-  min-height: 75vh;
-  font-size: 22px;
+  margin: 10px;
+  min-height: auto;
+  font-size: 20px;
+  width: 100%;
 }
 
 .first h1,
@@ -63,6 +66,7 @@ a {
   min-height: auto;
   display: flex;
   flex-direction: column;
+  margin: 0 8px;
 }
 
 .project-title {
@@ -82,7 +86,7 @@ a {
 
 .frameworks-list {
   list-style-type: none;
-  padding: 0;
+  padding: 0 16px;
   margin: 0 0 24px 0;
   display: flex;
   flex-direction: column;
@@ -92,19 +96,20 @@ a {
 .frameworks-list li {
   margin: 4px 0;
   position: relative;
-  padding-left: 20px;
+  padding-left: 24px;
+  margin-left: 8px;
 }
 
 .frameworks-list li:not(:last-child)::after {
   content: "•";
   color: white;
   position: absolute;
-  left: -15px;
+  left: 8px;
 }
 
 .projects-list {
   list-style-type: none;
-  padding: 0;
+  padding: 0 16px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -114,14 +119,15 @@ a {
 .projects-list li {
   margin: 4px 0;
   position: relative;
-  padding-left: 20px;
+  padding-left: 24px;
+  margin-left: 8px;
 }
 
 .projects-list li:not(:last-child)::after {
   content: "•";
   color: white;
   position: absolute;
-  left: -15px;
+  left: 8px;
 }
 
 .project-link {
@@ -138,6 +144,27 @@ a {
 }
 
 @media (max-width: 900px) {
+  .first,
+  .second,
+  .third,
+  .forth {
+    margin: 10px;
+    padding: 15px;
+    font-size: 18px;
+    min-height: auto;
+  }
+
+  .first h1,
+  .second h1,
+  .third h1,
+  .forth h1 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -147,6 +174,7 @@ a {
 
   .project-card {
     padding: 20px;
+    margin: 0 12px;
   }
 
   .project-title {
@@ -157,21 +185,51 @@ a {
     font-size: 1rem;
   }
 
+  .frameworks-list,
+  .projects-list {
+    padding: 0 12px;
+  }
+
   .frameworks-list li,
   .projects-list li {
     font-size: 0.9rem;
-    padding-left: 16px;
+    padding-left: 20px;
+    margin-left: 8px;
   }
 }
 
 @media (max-width: 480px) {
+  .first,
+  .second,
+  .third,
+  .forth {
+    margin: 8px;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .project-card {
+    font-size: 20px;
+    width:  30vh;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
   .projects-grid {
     gap: 16px;
     padding: 0 8px;
+    margin-top: 16px;
+  }
+
+  body {
+    padding-bottom: 40px;
   }
 
   .project-card {
     padding: 16px;
+    margin: 0 8px;
   }
 
   .project-title {
@@ -185,9 +243,20 @@ a {
     margin-bottom: 8px;
   }
 
+  .frameworks-list,
+  .projects-list {
+    padding: 0 12px;
+  }
+
   .frameworks-list li,
   .projects-list li {
     font-size: 0.8rem;
-    padding-left: 12px;
+    padding-left: 20px;
+    margin-left: 8px;
+  }
+
+  .frameworks-list li:not(:last-child)::after,
+  .projects-list li:not(:last-child)::after {
+    left: 6px;
   }
 } 

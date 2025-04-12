@@ -56,11 +56,9 @@ const Projects: React.FC = () => {
       ]
     },
     {
-      title: 'JavaScript/TypeScript',
+      title: 'TypeScript',
       frameworks: [
-        'React',
-        'Vite',
-        'TypeScript'
+        'React'
       ],
       projects: [
         { name: 'React front and Asp.net back' }

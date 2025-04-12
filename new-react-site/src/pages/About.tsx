@@ -5,8 +5,8 @@ import '../styles/About.css';
 const About: React.FC = () => {
   const socialProfiles = [
     { name: 'LeetCode', url: 'https://leetcode.com/fozu7916/' },
-    { name: 'GitHub', url: 'https://github.com/fozu7916' },
-    { name: 'Stepik', url: 'https://stepik.org/users/fozu7916' }
+    { name: 'github', url: 'https://github.com/fozu7916' },
+    { name: 'Stepik', url: 'https://stepik.org/users/621533557/profile' }
   ];
 
   return (
