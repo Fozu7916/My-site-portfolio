@@ -4,7 +4,7 @@ import '../styles/About.css';
 
 const About: React.FC = () => {
   const socialProfiles = [
-    { name: 'LeetCode', url: 'https://leetcode.com/fozu7916/' },
+    { name: 'LeetCode', url: 'https://leetcode.com/Fozuzzzxxxccc/' },
     { name: 'github', url: 'https://github.com/fozu7916' },
     { name: 'Stepik', url: 'https://stepik.org/users/621533557/profile' }
   ];
@@ -30,15 +30,12 @@ const About: React.FC = () => {
             <Typography variant="body1" paragraph>
               Я постоянно учусь и развиваюсь, изучая новые технологии и подходы к разработке.
               В свободное время я работаю над личными проектами, учусь писать код и читаю книги.
-              <br></br>
-              P.S предыдушие версии сайта всё ещё хостятся, с адресом https://https://zxcfozuN.netlify.app/ где N-номер от 1 до 11,где 1 - первая версия сайта,
-               2 - вторая версия сайта и т.д
             </Typography>
           </div>
           <div className="sidebar">
             <div className="profile-container">
               <img 
-                src="/images/Profile.png"
+                src="/images/Profile.jpg"
                 alt="Profile"
                 className="profile-image"
               />
