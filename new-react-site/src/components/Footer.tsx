@@ -6,11 +6,11 @@ const Footer: React.FC = () => {
     <footer>
       <p>
         © 2025 Fozu Inc. |{' '}
-        <a href="#" style={{ color: '#7E57C2' }}>
+        <a href="/privacy" style={{ color: '#7E57C2' }}>
           Privacy Policy
         </a>{' '}
         |{' '}
-        <a href="#" style={{ color: '#7E57C2' }}>
+        <a href="/terms" style={{ color: '#7E57C2' }}>
           Terms of Use
         </a>
       </p>
