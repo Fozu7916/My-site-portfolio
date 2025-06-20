@@ -1,0 +1,68 @@
+/* Основной контейнер */
+.project-showcase-paper {
+  background: rgba(33,33,33,0.92) !important;
+  color: #fff !important;
+  font-size: 1.22rem;
+  line-height: 1.8;
+  font-family: var(--font-primary);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border-radius: 80px;
+  border: 4px solid #b39ddb;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 64px auto 0 auto;
+  overflow: hidden;
+}
+
+.project-showcase-paper h1, .project-showcase-paper h2, .project-showcase-paper h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #b39ddb;
+  text-shadow: 0 2px 8px rgba(126,87,194,0.15);
+  margin-bottom: 1.2rem;
+}
+
+.project-showcase-paper p, .project-showcase-paper ul, .project-showcase-paper li {
+  font-size: 1.18rem;
+  margin-bottom: 1.1rem;
+}
+
+.project-showcase-image {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(126,87,194,0.12);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.project-showcase-image:hover {
+  transform: scale(1.04);
+}
+
+/* Lightbox (модальное окно для увеличения картинки) */
+.project-lightbox-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 900px) {
+  .project-showcase-paper {
+    padding: 1.2rem 0.5rem;
+    font-size: 1.08rem;
+  }
+  .project-showcase-image {
+    max-width: 98vw;
+  }
+} 

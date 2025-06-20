@@ -10,6 +10,7 @@ import Second from './pages/cpp/Second';
 import Third from './pages/cpp/Third';
 import Fourth from './pages/cpp/Fourth';
 import HallOfFame from './pages/HallOfFame';
+import ReactFirst from './pages/react/ReactFirst';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/cpp/second" element={<Second />} />
             <Route path="/cpp/third" element={<Third />} />
             <Route path="/cpp/fourth" element={<Fourth />} />
+            <Route path="/react/first" element={<ReactFirst />} />
           </Routes>
         </main>
         <Footer />

@@ -61,7 +61,7 @@ const Projects: React.FC = () => {
         'React'
       ],
       projects: [
-        { name: 'React front and Asp.net back' }
+        { name: 'AlekseyBook', link: '/react/first' }
       ]
     }
   ];

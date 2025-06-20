@@ -1,26 +1,44 @@
-import React from 'react';
-import { Container, Typography, Box, Link, Paper } from '@mui/material';
-import '../../styles/Projects.css';
+import React, { useState } from 'react';
+import { Container, Typography, Box, Link, Paper, Modal } from '@mui/material';
+import '../../styles/ProjectShowcase.css';
 
 const First: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+
+  const handleOpen = (src: string) => {
+    setSelectedImg(src);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedImg(null);
+  };
+
   return (
     <Container maxWidth="lg">
       <Box sx={{ mt: 4, mb: 4 }}>
         <Paper 
-          className="project-paper"
-          elevation={3} 
-          sx={{ 
-            p: 4,
-            backgroundColor: 'rgba(33, 33, 33, 0.8)',
-            color: 'white'
-          }}
+          className="project-showcase-paper"
+          elevation={3}
         >
           <Typography variant="h3" component="h1" gutterBottom>
             The basic add and remove at List app
           </Typography>
           
           <Box sx={{ my: 3 }}>
-            <img src="/images/first.png" alt="Project screenshot" style={{ maxWidth: '100%', height: 'auto' }} />
+            <button
+              type="button"
+              className="project-showcase-img-btn"
+              onClick={() => handleOpen('/images/first.png')}
+              onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') handleOpen('/images/first.png');
+              }}
+              style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
+            >
+              <img src="/images/first.png" alt="Project screenshot" className="project-showcase-image" />
+            </button>
           </Box>
 
           <Box sx={{ mb: 3 }}>
@@ -63,6 +81,17 @@ const First: React.FC = () => {
               Go Back
             </Link>
           </Box>
+          <Modal open={open} onClose={handleClose} className="project-lightbox-modal">
+            <Box sx={{ outline: 'none' }}>
+              {selectedImg && (
+                <img
+                  src={selectedImg}
+                  alt="Увеличенное изображение"
+                  className="project-lightbox-img"
+                />
+              )}
+            </Box>
+          </Modal>
         </Paper>
       </Box>
     </Container>

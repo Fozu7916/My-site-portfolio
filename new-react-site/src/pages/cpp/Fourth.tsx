@@ -1,66 +1,94 @@
-import React from 'react';
-import { Container, Typography, Box, Link, Paper } from '@mui/material';
-import '../../styles/Projects.css';
+import React, { useState } from 'react';
+import { Container, Typography, Box, Link, Paper, Modal } from '@mui/material';
+import '../../styles/ProjectShowcase.css';
 
 const Fourth: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+
+  const handleOpen = (src: string) => {
+    setSelectedImg(src);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedImg(null);
+  };
+
   return (
     <Container maxWidth="lg">
       <Box sx={{ mt: 4, mb: 4 }}>
         <Paper 
-          elevation={3} 
-          sx={{ 
-            p: 4,
-            backgroundColor: 'rgba(33, 33, 33, 0.8)',
-            color: 'white'
-          }}
+          className="project-showcase-paper"
+          elevation={3}
         >
-          <div className="project-paper">
-            <Typography variant="h3" component="h1" gutterBottom>
-              Qt program simulating bank
-            </Typography>
-            
-            <Box sx={{ my: 3 }}>
-              <img src="/images/fourth.png" alt="Project screenshot" style={{ maxWidth: '100%', height: 'auto' }} />
-            </Box>
+          <Typography variant="h3" component="h1" gutterBottom>
+            Qt program simulating bank
+          </Typography>
+          
+          <Box sx={{ my: 3 }}>
+            <button
+              type="button"
+              className="project-showcase-img-btn"
+              onClick={() => handleOpen('/images/fourth.png')}
+              onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') handleOpen('/images/fourth.png');
+              }}
+              style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
+            >
+              <img src="/images/fourth.png" alt="Project screenshot" className="project-showcase-image" />
+            </button>
+          </Box>
 
-            <Box sx={{ mb: 3 }}>
-              <Typography variant="h6" component="p" sx={{ display: 'inline' }}>
-                Github repository:{' '}
-              </Typography>
-              <Link 
-                href="https://github.com/Fozu7916/Login-balance-qt-" 
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{ color: '#7E57C2' }}
-              >
-                Check
-              </Link>
-            </Box>
-
-            <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
-              About this app:
+          <Box sx={{ mb: 3 }}>
+            <Typography variant="h6" component="p" sx={{ display: 'inline' }}>
+              Github repository:{' '}
             </Typography>
-            <Typography variant="body1" paragraph>
-              This is MVC code, where i practice SOLID, connect MySQL database, and do so much work
-              (about 2 month i need to complete this app). First i wrote multi file app, put logic in view and then rewrite 
-              all code, use MVC pattern.
-            </Typography>
+            <Link 
+              href="https://github.com/Fozu7916/Login-balance-qt-" 
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: '#7E57C2' }}
+            >
+              Check
+            </Link>
+          </Box>
 
-            <Box sx={{ mt: 3 }}>
-              <Link href="/projects" sx={{ 
-                textDecoration: 'none',
-                backgroundColor: '#7E57C2',
-                color: 'white',
-                padding: '10px 20px',
-                borderRadius: '4px',
-                '&:hover': {
-                  backgroundColor: '#5E35B1'
-                }
-              }}>
-                Go Back
-              </Link>
+          <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
+            About this app:
+          </Typography>
+          <Typography variant="body1" paragraph>
+            This is MVC code, where i practice SOLID, connect MySQL database, and do so much work
+            (about 2 month i need to complete this app). First i wrote multi file app, put logic in view and then rewrite 
+            all code, use MVC pattern.
+          </Typography>
+
+          <Box sx={{ mt: 3 }}>
+            <Link href="/projects" sx={{ 
+              textDecoration: 'none',
+              backgroundColor: '#7E57C2',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '4px',
+              '&:hover': {
+                backgroundColor: '#5E35B1'
+              }
+            }}>
+              Go Back
+            </Link>
+          </Box>
+          <Modal open={open} onClose={handleClose} className="project-lightbox-modal">
+            <Box sx={{ outline: 'none' }}>
+              {selectedImg && (
+                <img
+                  src={selectedImg}
+                  alt="Увеличенное изображение"
+                  className="project-lightbox-img"
+                />
+              )}
             </Box>
-          </div>
+          </Modal>
         </Paper>
       </Box>
     </Container>
