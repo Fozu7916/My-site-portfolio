@@ -259,4 +259,37 @@ a {
   .projects-list li:not(:last-child)::after {
     left: 6px;
   }
+}
+
+.project-paper {
+  font-size: 1.22rem;
+  line-height: 1.8;
+  color: #fff;
+  font-family: var(--font-primary);
+  background: transparent;
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+}
+
+.project-paper h1, .project-paper h2, .project-paper h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #b39ddb;
+  text-shadow: 0 2px 8px rgba(126,87,194,0.15);
+  margin-bottom: 1.2rem;
+}
+
+.project-paper p, .project-paper ul, .project-paper li {
+  font-size: 1.18rem;
+  margin-bottom: 1.1rem;
+}
+
+.project-paper a {
+  color: #9575cd;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.project-paper a:hover {
+  color: #d1c4e9;
 } 

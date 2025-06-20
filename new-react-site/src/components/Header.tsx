@@ -9,6 +9,7 @@ const Header: React.FC = () => {
       <nav className="nav-links">
         <Link to="/projects">Projects</Link>
         <Link to="/devlog">Devlog</Link>
+        <Link to="/hall-of-fame">Hall of Fame</Link>
         <Link to="/about">About</Link>
       </nav>
     </header>

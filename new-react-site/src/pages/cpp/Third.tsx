@@ -7,6 +7,7 @@ const Third: React.FC = () => {
     <Container maxWidth="lg">
       <Box sx={{ mt: 4, mb: 4 }}>
         <Paper 
+          className="project-paper"
           elevation={3} 
           sx={{ 
             p: 4,

@@ -68,41 +68,43 @@ const Projects: React.FC = () => {
 
   return (
     <Container maxWidth="lg">
-      <div className="projects-grid">
-        {sections.map((section, index) => (
-          <div key={index} className="project-card">
-            <Typography variant="h4" component="h2" className="project-title">
-              {section.title}
-            </Typography>
-            <Typography variant="h6" className="section-subtitle">
-              Фреймворки и библиотеки:
-            </Typography>
-            <ul className="frameworks-list">
-              {section.frameworks.map((framework, idx) => (
-                <li key={idx}>{framework}</li>
-              ))}
-            </ul>
-            <Typography variant="h6" className="section-subtitle">
-              Реализованные проекты:
-            </Typography>
-            <ul className="projects-list">
-              {section.projects.map((project, idx) => (
-                <li key={idx}>
-                  {project.link ? (
-                    <Link href={project.link} className="project-link">
-                      {project.name}
-                    </Link>
-                  ) : (
-                    <span className="project-name">
-                      {project.name}
-                      {project.status && ` (${project.status})`}
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="project-paper">
+        <div className="projects-grid">
+          {sections.map((section, index) => (
+            <div key={index} className="project-card">
+              <Typography variant="h4" component="h2" className="project-title">
+                {section.title}
+              </Typography>
+              <Typography variant="h6" className="section-subtitle">
+                Фреймворки и библиотеки:
+              </Typography>
+              <ul className="frameworks-list">
+                {section.frameworks.map((framework, idx) => (
+                  <li key={idx}>{framework}</li>
+                ))}
+              </ul>
+              <Typography variant="h6" className="section-subtitle">
+                Реализованные проекты:
+              </Typography>
+              <ul className="projects-list">
+                {section.projects.map((project, idx) => (
+                  <li key={idx}>
+                    {project.link ? (
+                      <Link href={project.link} className="project-link">
+                        {project.name}
+                      </Link>
+                    ) : (
+                      <span className="project-name">
+                        {project.name}
+                        {project.status && ` (${project.status})`}
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </Container>
   );

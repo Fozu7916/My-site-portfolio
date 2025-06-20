@@ -1,0 +1,45 @@
+.halloffame-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 60vh;
+}
+
+.halloffame-paper {
+  background: transparent;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-family: var(--font-primary);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 700px;
+  background-color: #080404b0;
+}
+
+.halloffame-paper h1, .halloffame-paper h2, .halloffame-paper h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #b39ddb;
+  text-shadow: 0 2px 8px rgba(126,87,194,0.15);
+  margin-bottom: 1.2rem;
+}
+
+.halloffame-paper p, .halloffame-paper ul, .halloffame-paper li {
+  font-size: 1.18rem;
+  margin-bottom: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .halloffame-container {
+    margin-top: 60px;
+    padding: 0 10px;
+  }
+  .halloffame-paper {
+    padding: 1.2rem 0.5rem;
+    font-size: 1.08rem;
+  }
+} 

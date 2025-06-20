@@ -9,6 +9,7 @@ import First from './pages/cpp/First';
 import Second from './pages/cpp/Second';
 import Third from './pages/cpp/Third';
 import Fourth from './pages/cpp/Fourth';
+import HallOfFame from './pages/HallOfFame';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/devlog" element={<Devlog />} />
+            <Route path="/hall-of-fame" element={<HallOfFame />} />
             <Route path="/cpp/first" element={<First />} />
             <Route path="/cpp/second" element={<Second />} />
             <Route path="/cpp/third" element={<Third />} />
