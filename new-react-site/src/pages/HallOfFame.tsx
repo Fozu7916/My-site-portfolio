@@ -12,17 +12,22 @@ const HallOfFame: React.FC = () => {
             elevation={3} 
             sx={{ 
               p: 4,
-              backgroundColor: 'rgba(33, 33, 33, 0.8)',
-              color: 'white'
+              backgroundColor: 'rgba(33, 33, 33, 0.92)',
+              color: 'white',
+              borderRadius: '18px',
+              overflow: 'hidden'
             }}
           >
             <Typography variant="h3" component="h1" gutterBottom>
               Hall of Fame
             </Typography>
-            
+
             <Typography variant="body1" paragraph>
-              Занял первое место на курсе яндекса по С++
+              1) Занял первое место на курсе яндекса по С++ (бал не максимальный, т.к. скипнул программирование arduino)
             </Typography>
+
+            <img src="images/Yandex.jpg" alt="Yandex Award" className="halloffame-image" />
+
           </Paper>
         </Box>
       </div>

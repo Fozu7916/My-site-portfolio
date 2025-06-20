@@ -7,7 +7,7 @@
 }
 
 .halloffame-paper {
-  background: transparent;
+  background: rgba(33,33,33,0.92);
   color: #fff;
   font-size: 1.25rem;
   line-height: 1.8;
@@ -17,7 +17,7 @@
   padding: 2.5rem 2rem;
   width: 100%;
   max-width: 700px;
-  background-color: #080404b0;
+  overflow: hidden;
 }
 
 .halloffame-paper h1, .halloffame-paper h2, .halloffame-paper h3 {
@@ -31,6 +31,15 @@
 .halloffame-paper p, .halloffame-paper ul, .halloffame-paper li {
   font-size: 1.18rem;
   margin-bottom: 1.1rem;
+}
+
+.halloffame-image {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(126,87,194,0.12);
 }
 
 @media (max-width: 900px) {

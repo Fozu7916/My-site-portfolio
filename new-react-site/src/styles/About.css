@@ -9,7 +9,7 @@
 
 .about-container {
   flex: 2;  
-  background-color: rgba(33, 33, 33, 0.8);
+  background-color: rgba(33,33,33,0.92);
   padding: 20px;
   border-radius: 1.5rem;
   color: white;
@@ -42,7 +42,7 @@
 }
 
 .profile-container {
-  background-color: rgba(33, 33, 33, 0.8);
+  background-color: rgba(33,33,33,0.92);
   padding: 20px;
   border-radius: 1.5rem;
   text-align: center;
