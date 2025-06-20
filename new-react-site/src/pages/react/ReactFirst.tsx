@@ -3,14 +3,14 @@ import { Container, Typography, Box, Paper, List, ListItem, ListItemText, Modal 
 import '../../styles/ProjectShowcase.css';
 
 const images = [
-  "https://github.com/user-attachments/assets/d89f93c7-bf23-439d-ac3e-b31f622d0c37",
-  "https://github.com/user-attachments/assets/c00046e0-4184-476c-bc5e-1f8707dcd240",
-  "https://github.com/user-attachments/assets/f64140b0-b0f5-4242-b57a-0dbe8cf7f8dd",
-  "https://github.com/user-attachments/assets/c1000a09-bab7-4d57-88f7-7611ab0af391",
-  "https://github.com/user-attachments/assets/8bf6b184-679b-40d4-9001-4771793289dc",
-  "https://github.com/user-attachments/assets/582a979b-2fed-4546-89b1-99394207b547",
-  "https://github.com/user-attachments/assets/b2357d12-2ba4-4566-a7d1-2da09bdd5b3a",
-  "https://github.com/user-attachments/assets/02838099-6aa8-4a1e-bf14-ea225b16baae"
+  "/images/ReactFirst.png",
+  "/images/ReactSecond.png",
+  "/images/ReactThird.png",
+  "/images/ReactFourth.png",
+  "/images/ReactFifth.png",
+  "/images/ReactSixth.png",
+  "/images/ReactSeventh.png",
+  "/images/ReactEighth.png"
 ];
 
 const First: React.FC = () => {
@@ -75,20 +75,29 @@ const First: React.FC = () => {
         <Typography variant="h6" gutterBottom>Технологии</Typography>
         <Typography variant="subtitle1" gutterBottom>Фронтенд</Typography>
         <List>
-          <ListItem><ListItemText primary="React" /></ListItem>
-          <ListItem><ListItemText primary="TypeScript" /></ListItem>
-          <ListItem><ListItemText primary="SignalR (real-time)" /></ListItem>
-          <ListItem><ListItemText primary="CSS Modules" /></ListItem>
+          <ListItem><ListItemText primary="React, TypeScript, SignalR (real-time), CSS Modules" /></ListItem>
         </List>
         <Typography variant="subtitle1" gutterBottom>Бэкенд</Typography>
         <List>
-          <ListItem><ListItemText primary="ASP.NET Core" /></ListItem>
-          <ListItem><ListItemText primary="Entity Framework Core" /></ListItem>
-          <ListItem><ListItemText primary="MySQL" /></ListItem>
-          <ListItem><ListItemText primary="SignalR" /></ListItem>
-          <ListItem><ListItemText primary="JWT аутентификация" /></ListItem>
+          <ListItem><ListItemText primary="ASP.NET Core, Entity Framework Core, MySQL, SignalR, JWT аутентификация" /></ListItem>
         </List>
-        <Typography variant="h6" gutterBottom>Контакты</Typography>
+        <Box sx={{ mt: 3 }}>
+          <a
+            href="/projects"
+            style={{
+              textDecoration: 'none',
+              backgroundColor: '#7E57C2',
+              color: 'white',
+              padding: '10px 20px',
+              borderRadius: '4px',
+              fontWeight: 500,
+              transition: 'background 0.2s',
+              display: 'inline-block'
+            }}
+          >
+            Go Back
+          </a>
+        </Box>
         <Modal open={open} onClose={handleClose} className="project-lightbox-modal">
           <Box sx={{ outline: 'none' }}>
             {selectedImg && (

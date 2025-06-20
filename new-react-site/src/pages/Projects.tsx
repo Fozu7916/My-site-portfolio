@@ -48,11 +48,12 @@ const Projects: React.FC = () => {
       title: 'Python',
       frameworks: [
         'Django',
-        'Flask'
+        'Flask',
+        'PyGame'
       ],
       projects: [
-        { name: 'Telegram bot' },
-        { name: 'Site' }
+        { name: 'Telegram bot' , status: 'WIP' },
+        { name: 'Site' , status: 'WIP' }
       ]
     },
     {

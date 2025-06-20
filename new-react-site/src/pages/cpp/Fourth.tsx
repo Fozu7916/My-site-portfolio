@@ -56,12 +56,33 @@ const Fourth: React.FC = () => {
           </Box>
 
           <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
-            About this app:
+            Описание проекта
           </Typography>
           <Typography variant="body1" paragraph>
-            This is MVC code, where i practice SOLID, connect MySQL database, and do so much work
-            (about 2 month i need to complete this app). First i wrote multi file app, put logic in view and then rewrite 
-            all code, use MVC pattern.
+            ЯКолшелек — приложение для управления балансом пользователя с регистрацией, авторизацией и операциями с деньгами (пополнение/снятие). Реализовано на C++ с использованием Qt и паттерна MVC.
+          </Typography>
+          <Typography variant="h6" gutterBottom>Ключевые особенности:</Typography>
+          <ul>
+            <li>Регистрация и авторизация с безопасным хранением паролей (хеширование с солью)</li>
+            <li>Управление балансом: пополнение, снятие, проверка достаточности средств</li>
+            <li>История транзакций пользователя</li>
+            <li>Централизованная обработка ошибок</li>
+            <li>Архитектура MVC: разделение на модель, представление и контроллер</li>
+            <li>Использование интерфейсов для гибкости и расширяемости</li>
+            <li>Защита от SQL-инъекций, валидация данных</li>
+          </ul>
+          <Typography variant="h6" gutterBottom>Технологии:</Typography>
+          <Typography variant="body1" paragraph>
+            C++17, Qt 6, MySQL
+          </Typography>
+          <Typography variant="h6" gutterBottom>Безопасность:</Typography>
+          <ul>
+            <li>Пароли хранятся в зашифрованном виде</li>
+            <li>Используются подготовленные SQL-запросы</li>
+            <li>Проверка входных данных</li>
+          </ul>
+          <Typography variant="body2" paragraph sx={{ color: '#b39ddb', mt: 2 }}>
+            Возможные улучшения: вынести работу с БД в отдельный слой, добавить логирование и расширенную валидацию, вынести длительные операции в отдельный поток.
           </Typography>
 
           <Box sx={{ mt: 3 }}>

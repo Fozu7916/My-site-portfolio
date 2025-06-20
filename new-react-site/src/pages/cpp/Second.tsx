@@ -56,12 +56,21 @@ const Second: React.FC = () => {
           </Box>
 
           <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
-            About this app:
+            Описание проекта
           </Typography>
           <Typography variant="body1" paragraph>
-            The application is written in C++, using the QT framework. Here you can create a password,
-            choose level of defence and copy it at the 1 button click. I also break here MVC pattern,
-            because realise logic at the view file.
+            Генератор паролей с гибкими настройками уровня сложности. Реализован на C++ с использованием Qt.
+          </Typography>
+          <Typography variant="h6" gutterBottom>Ключевые особенности:</Typography>
+          <ul>
+            <li>Генерация паролей разной длины и сложности</li>
+            <li>Выбор параметров (буквы, цифры, спецсимволы)</li>
+            <li>Копирование пароля в буфер обмена одной кнопкой</li>
+            <li>Современный интерфейс на Qt</li>
+          </ul>
+          <Typography variant="h6" gutterBottom>Технологии:</Typography>
+          <Typography variant="body1" paragraph>
+            C++, Qt
           </Typography>
 
           <Box sx={{ mt: 3 }}>

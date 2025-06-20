@@ -56,15 +56,21 @@ const First: React.FC = () => {
           </Box>
 
           <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
-            About this app:
+            Описание проекта
           </Typography>
           <Typography variant="body1" paragraph>
-            The application is written in C++, using the WinForms framework. The main file takes up only 88 lines, because it does not contain 
-            complex logic. The Create button is responsible for creating a new line, the Save button saves all lines to the &quot;output.txt&quot;
-            file, I think it is unnecessary to talk about deleting and editing. It is also worth noting that the form designer synchronizes 
-            lines from the &quot;output.txt&quot; file, all lines are immediately written to the application without the need for the user to do this
-            manually (at first this was a function of a separate button), I decided not to synchronize it with the database, but to leave the 
-            interaction with the lines through the file.
+            Приложение для управления списком задач с возможностью добавления, редактирования и удаления элементов. Реализовано на C++ с использованием WinForms.
+          </Typography>
+          <Typography variant="h6" gutterBottom>Ключевые особенности:</Typography>
+          <ul>
+            <li>Добавление, удаление и редактирование строк в списке</li>
+            <li>Сохранение данных в файл</li>
+            <li>Загрузка данных при запуске приложения</li>
+            <li>Минималистичный и интуитивный интерфейс</li>
+          </ul>
+          <Typography variant="h6" gutterBottom>Технологии:</Typography>
+          <Typography variant="body1" paragraph>
+            C++, WinForms
           </Typography>
 
           <Box sx={{ mt: 3 }}>

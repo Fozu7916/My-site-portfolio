@@ -56,12 +56,21 @@ const Third: React.FC = () => {
           </Box>
 
           <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
-            About this app:
+            Описание проекта
           </Typography>
           <Typography variant="body1" paragraph>
-            This application is my latest development on 300 lines of code.
-            Here I connected the header file of SQLite, wrote three classes, implemented the interaction between them, used
-            CamelCase, Abstraction, Encapsulation, Polymorphism, Composition, State Management, Working with objects and their life cycle.
+            Приложение для управления таблицей расходов с использованием базы данных SQLite. Реализовано на C++ с применением паттернов ООП.
+          </Typography>
+          <Typography variant="h6" gutterBottom>Ключевые особенности:</Typography>
+          <ul>
+            <li>Добавление, редактирование и удаление записей о расходах</li>
+            <li>Хранение данных в базе SQLite</li>
+            <li>Использование ООП: абстракция, инкапсуляция, полиморфизм</li>
+            <li>Просмотр истории операций</li>
+          </ul>
+          <Typography variant="h6" gutterBottom>Технологии:</Typography>
+          <Typography variant="body1" paragraph>
+            C++, SQLite, ООП
           </Typography>
 
           <Box sx={{ mt: 3 }}>
