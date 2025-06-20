@@ -11,7 +11,8 @@ const Devlog: React.FC = () => {
     { date: '12.01', content: 'Начало разработки новой версии сайта на React' },
     { date: '12.04', content: 'Переписан сайт на React' },
     { date: '15.05', content: 'Настроенно CI CD для сайта' },
-    { date: '20.06', content: 'редизайн сайта + страница "Зала славы"' }
+    { date: '20.06', content: 'редизайн сайта + страница "Зала славы"' },
+    { date: '20.06', content: 'Добавил React приложение - Alekseybook' }
 
     
   ].reverse();

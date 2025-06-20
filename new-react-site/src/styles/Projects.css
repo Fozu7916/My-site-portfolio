@@ -6,7 +6,6 @@ body {
   min-height: 100vh;
   color: white;
   position: relative;
-  padding-bottom: 60px; /* Для футера */
 }
 
 .container {
@@ -20,29 +19,6 @@ body {
   max-width: 100%;
 }
 
-.first,
-.second,
-.third,
-.forth {
-  flex: 1;
-  padding: 20px;
-  background-color: rgba(33,33,33,0.92);
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 1.5rem;
-  box-sizing: border-box;
-  margin: 10px;
-  min-height: auto;
-  font-size: 20px;
-  width: 100%;
-}
-
-.first h1,
-.second h1,
-.third h1,
-.forth h1 {
-  font-size: 30px;
-}
 
 a {
   color: white;
@@ -292,4 +268,18 @@ a {
 
 .project-paper a:hover {
   color: #d1c4e9;
+}
+
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background: #1a1333;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #7E57C2 0%, #9575CD 100%);
+  border-radius: 8px;
+  border: 2px solid #1a1333;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #9575CD 0%, #7E57C2 100%);
 } 
