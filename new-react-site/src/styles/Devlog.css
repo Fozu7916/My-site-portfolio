@@ -84,3 +84,36 @@ border-radius: 38px;
 padding: 30px;
 margin-top: 100px;
 }
+
+.devlog-container, .devlog-page, .devlog-entry {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .devlog-container,
+  .devlog-page {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 18px;
+  }
+  .devlog-entry {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+  }
+  .devlog-entry p,
+  .entry-content {
+    font-size: 1rem;
+    word-break: break-word;
+    max-width: 100%;
+  }
+  .devlog-entries .devlog-entry .entry-content {
+    font-size: 1.1rem;
+    word-break: break-word;
+    max-width: 100%;
+  }
+  .devlog-title {
+    font-size: 1.1rem;
+  }
+}

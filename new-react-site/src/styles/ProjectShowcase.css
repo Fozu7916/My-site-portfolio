@@ -66,3 +66,14 @@
     max-width: 98vw;
   }
 }
+
+@media (max-width: 480px) {
+  .project-showcase-paper {
+    padding: 0.7rem 0.2rem;
+    font-size: 0.95rem;
+  }
+  .project-showcase-image {
+    max-width: 95vw;
+    margin: 0.7rem auto;
+  }
+}

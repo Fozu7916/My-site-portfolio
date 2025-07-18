@@ -1,8 +1,21 @@
-import React from 'react';
-import { Container, Typography, Box, Paper } from '@mui/material';
+import React, { useState } from 'react';
+import { Container, Typography, Box, Paper, Modal } from '@mui/material';
 import '../styles/HallOfFame.css';
 
 const HallOfFame: React.FC = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedImg, setSelectedImg] = useState<string | null>(null);
+
+  const handleOpen = (src: string) => {
+    setSelectedImg(src);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedImg(null);
+  };
+
   return (
     <Container maxWidth="lg">
       <div className="halloffame-container">
@@ -26,11 +39,29 @@ const HallOfFame: React.FC = () => {
               1) Занял первое место на курсе яндекса по С++ (бал не максимальный, т.к. скипнул программирование arduino)
             </Typography>
 
-            <img src="images/Yandex.jpg" alt="Yandex Award" className="halloffame-image" />
+            <button
+              type="button"
+              className="project-showcase-img-btn"
+              onClick={() => handleOpen('images/Yandex.png')}
+              style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
+            >
+              <img src="images/Yandex.png" alt="Yandex Award" className="halloffame-image" />
+            </button>
 
           </Paper>
         </Box>
       </div>
+      <Modal open={open} onClose={handleClose} className="project-lightbox-modal">
+        <Box sx={{ outline: 'none' }}>
+          {selectedImg && (
+            <img
+              src={selectedImg}
+              alt="Увеличенное изображение"
+              className="project-lightbox-img"
+            />
+          )}
+        </Box>
+      </Modal>
     </Container>
   );
 };

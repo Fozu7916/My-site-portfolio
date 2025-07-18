@@ -96,4 +96,32 @@
   .about-container {
     margin-bottom: 20px;
   }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 10px;
+    font-size: 1em;
+  }
+  .about-container h1 {
+    font-size: 1.5em;
+  }
+  .about-container li,
+  .about-container p {
+    font-size: 1em;
+  }
+  .profile-container {
+    padding: 10px;
+  }
+  .profile-image {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 12px;
+  }
+  .social-link {
+    font-size: 1em;
+  }
+  .content-wrapper {
+    gap: 10px;
+  }
 } 
