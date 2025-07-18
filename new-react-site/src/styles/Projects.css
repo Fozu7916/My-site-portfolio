@@ -3,7 +3,6 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   color: white;
   position: relative;
 }
@@ -17,6 +16,13 @@ body {
   box-sizing: border-box;
   border-radius: 1.5rem;
   max-width: 100%;
+}
+
+.page-container {
+  margin-top: 72px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
 }
 
 
@@ -172,6 +178,12 @@ a {
     padding-left: 20px;
     margin-left: 8px;
   }
+
+  .page-container {
+    margin-top: 64px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -235,6 +247,12 @@ a {
   .projects-list li:not(:last-child)::after {
     left: 6px;
   }
+
+  .page-container {
+    margin-top: 56px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
 }
 
 .project-paper {
@@ -270,6 +288,10 @@ a {
   color: #d1c4e9;
 }
 
+.project-paper, .projects-grid, .project-card {
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
 body::-webkit-scrollbar {
   width: 12px;
@@ -282,4 +304,9 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #9575CD 0%, #7E57C2 100%);
+} 
+
+.project-card, .project-title, .section-subtitle, .frameworks-list, .projects-list, .project-link, .project-name {
+  word-break: break-word;
+  overflow-wrap: anywhere;
 } 

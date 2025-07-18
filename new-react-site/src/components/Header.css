@@ -80,6 +80,22 @@
   }
 }
 
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem 0.3rem;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
+  .nav-links {
+    gap: 0.5rem;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+    margin: 0 6px;
+  }
+}
+
 .up_panel {
   text-align: center;
   color: white;

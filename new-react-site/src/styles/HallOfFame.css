@@ -42,6 +42,13 @@
   box-shadow: 0 4px 24px rgba(126,87,194,0.12);
 }
 
+.page-container {
+  margin-top: 72px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
 @media (max-width: 900px) {
   .halloffame-container {
     margin-top: 60px;
@@ -50,5 +57,30 @@
   .halloffame-paper {
     padding: 1.2rem 0.5rem;
     font-size: 1.08rem;
+  }
+  .page-container {
+    margin-top: 64px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .halloffame-container {
+    margin-top: 30px;
+    padding: 0 2px;
+  }
+  .halloffame-paper {
+    padding: 0.7rem 0.2rem;
+    font-size: 0.98rem;
+  }
+  .halloffame-image {
+    max-width: 90vw;
+    margin: 1rem auto;
+  }
+  .page-container {
+    margin-top: 56px;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 } 
