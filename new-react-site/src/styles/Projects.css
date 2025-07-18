@@ -120,23 +120,6 @@ a {
 }
 
 @media (max-width: 900px) {
-  .first,
-  .second,
-  .third,
-  .forth {
-    margin: 10px;
-    padding: 15px;
-    font-size: 18px;
-    min-height: auto;
-  }
-
-  .first h1,
-  .second h1,
-  .third h1,
-  .forth h1 {
-    font-size: 24px;
-  }
-
   .container {
     padding: 10px;
   }
@@ -175,15 +158,6 @@ a {
 }
 
 @media (max-width: 480px) {
-  .first,
-  .second,
-  .third,
-  .forth {
-    margin: 8px;
-    padding: 12px;
-    font-size: 16px;
-  }
-
   .project-card {
     font-size: 20px;
     width:  30vh;
