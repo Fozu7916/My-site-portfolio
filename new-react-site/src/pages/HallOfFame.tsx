@@ -49,7 +49,7 @@ const HallOfFame: React.FC = () => {
             </button>
 
             <Typography variant="body1" paragraph>
-              1) Пройдены курсы по "промышленному" программированию на С++ от вк
+              2) Пройдены курсы по "промышленному" программированию на С++ от вк
             </Typography>
 
             <button
