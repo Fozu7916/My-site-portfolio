@@ -48,6 +48,20 @@ const HallOfFame: React.FC = () => {
               <img src="images/Yandex.png" alt="Yandex Award" className="halloffame-image" />
             </button>
 
+            <Typography variant="body1" paragraph>
+              1) Пройдены курсы по "промышленному" программированию на С++ от вк
+            </Typography>
+
+            <button
+              type="button"
+              className="project-showcase-img-btn"
+              onClick={() => handleOpen('images/Stepik.png')}
+              style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
+            >
+              <img src="images/Yandex.png" alt="Yandex Award" className="halloffame-image" />
+            </button>
+
+
           </Paper>
         </Box>
       </div>
