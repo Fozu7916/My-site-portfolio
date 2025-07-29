@@ -36,7 +36,7 @@ const HallOfFame: React.FC = () => {
             </Typography>
 
             <Typography variant="body1" paragraph>
-              1) Занял первое место на курсе яндекса по С++ (бал не максимальный, т.к. скипнул программирование arduino)
+              1) Занял первое место на курсе яндекса по С++
             </Typography>
 
             <button
@@ -49,7 +49,7 @@ const HallOfFame: React.FC = () => {
             </button>
 
             <Typography variant="body1" paragraph>
-              2) Пройдены курсы по "промышленному" программированию на С++ от вк
+              2) Пройдены курсы по &quot;промышленному&quot; программированию на С++ от вк
             </Typography>
 
             <button
