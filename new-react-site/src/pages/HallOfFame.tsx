@@ -58,7 +58,7 @@ const HallOfFame: React.FC = () => {
               onClick={() => handleOpen('images/Stepik.png')}
               style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
             >
-              <img src="images/Yandex.png" alt="Yandex Award" className="halloffame-image" />
+              <img src="images/Stepik.png" alt="Yandex Award" className="halloffame-image" />
             </button>
 
 
