@@ -40,7 +40,7 @@ const About: React.FC = () => {
           <div className="sidebar">
             <div className="profile-container">
               <img 
-                src="/images/Profile.jpg"
+                src="/images/profile.jpg"
                 alt="Profile"
                 className="profile-image"
               />

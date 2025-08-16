@@ -20,7 +20,7 @@ export const projectsData: ProjectData[] = [
     projects: [
       { name: 'Winform app User control', link: '/cpp/first' },
       { name: 'QT app Password Generator', link: '/cpp/second' },
-      { name: 'Program connected with SQL-database(console + SQL)', link: '/cpp/third' },
+      { name: 'SQL-database(console + SQL)', link: '/cpp/third' },
       { name: 'Qt program simulating bank', link: '/cpp/fourth' },
       { name: 'QF_player — Музыкальный плеер на Qt', link: '/cpp/fifth' }
     ]

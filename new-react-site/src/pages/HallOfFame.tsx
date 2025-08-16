@@ -36,7 +36,7 @@ const HallOfFame: React.FC = () => {
             </Typography>
 
             <Typography variant="body1" paragraph>
-              1) Занял первое место на курсе яндекса по С++
+              1) Прошел курс от Яндекса по С++
             </Typography>
 
             <button

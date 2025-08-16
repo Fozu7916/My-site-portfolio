@@ -45,7 +45,7 @@ const Fifth: React.FC = () => {
               Github repository:{' '}
             </Typography>
             <Link 
-              href="#" 
+              href="https://github.com/Fozu7916/TextRedactor/tree/main" 
               target="_blank"
               rel="noopener noreferrer"
               sx={{ color: '#7E57C2' }}
