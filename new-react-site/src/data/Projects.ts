@@ -41,18 +41,6 @@ export const projectsData: ProjectData[] = [
     ]
   },
   {
-    title: 'Python',
-    frameworks: [
-      'Django',
-      'Flask',
-      'PyGame'
-    ],
-    projects: [
-      { name: 'Telegram bot', status: 'WIP' },
-      { name: 'Site', status: 'WIP' }
-    ]
-  },
-  {
     title: 'TypeScript',
     frameworks: [
       'React'

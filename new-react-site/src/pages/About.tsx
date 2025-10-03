@@ -28,7 +28,6 @@ const About: React.FC = () => {
               <ul>
                 <li>Разработка на C++ с использованием QT, WinForms и SFML</li>
                 <li>Разработка на C# с использованием Unity, ASP.NET, Avalonia и MAUI</li>
-                <li>Разработка на Python с использованием Django и Flask</li>
                 <li>Разработка на JavaScript/TypeScript с использованием React</li>
               </ul>
               <Typography variant="body1" paragraph>

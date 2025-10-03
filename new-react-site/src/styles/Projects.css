@@ -33,11 +33,11 @@ a {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 48px;
   margin-top: 64px;
   margin-bottom: 32px;
-  padding: 0 16px;
+  padding: 0;
 }
 
 .project-card {
@@ -236,7 +236,7 @@ a {
   font-family: var(--font-primary);
   background: transparent;
   border-radius: 18px;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 1rem;
 }
 
 .project-paper h1, .project-paper h2, .project-paper h3 {

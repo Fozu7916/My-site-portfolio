@@ -5,7 +5,7 @@ import ProjectCard from '../components/ProjectCard';
 import { projectsData } from '../data/Projects';
 
 const Projects: React.FC = () => (
-  <Container maxWidth="lg">
+  <Container maxWidth={false} disableGutters>
     <div className="project-paper">
       <div className="projects-grid">
         {projectsData.map((section, index) => (
