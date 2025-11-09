@@ -19,13 +19,11 @@ const Fifth: React.FC = () => {
   return (
     <Container maxWidth="lg">
       <Box sx={{ mt: 4, mb: 4 }}>
-        <Paper 
-          className="project-showcase-paper"
-          elevation={3}
-        >
+        <Paper className="project-showcase-paper" elevation={3}>
           <Typography variant="h3" component="h1" gutterBottom>
             QF_player — Музыкальный плеер на Qt
           </Typography>
+
           <Box sx={{ my: 3 }}>
             <button
               type="button"
@@ -44,8 +42,8 @@ const Fifth: React.FC = () => {
             <Typography variant="h6" component="p" sx={{ display: 'inline' }}>
               Github repository:{' '}
             </Typography>
-            <Link 
-              href="https://github.com/Fozu7916/TextRedactor/tree/main" 
+            <Link
+              href="https://github.com/Fozu7916/TextRedactor/tree/main"
               target="_blank"
               rel="noopener noreferrer"
               sx={{ color: '#7E57C2' }}
@@ -55,50 +53,76 @@ const Fifth: React.FC = () => {
           </Box>
 
           <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
-            Описание проекта
+            Кратко
           </Typography>
           <Typography variant="body1" paragraph>
-            QF_player — это простой, но функциональный музыкальный плеер на Qt с поддержкой mpv. Приложение позволяет:
+            QF_player — простой, надёжный музыкальный плеер на Qt (C++) с использованием libmpv для воспроизведения. Проект минималистичен, легко собирается и расширяется.
+          </Typography>
+
+          <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
+            Возможности
           </Typography>
           <ul>
             <li>Добавлять и удалять треки</li>
-            <li>Воспроизводить, ставить на паузу, перематывать и переключать треки</li>
-            <li>Управлять громкостью</li>
-            <li>Сохранять и загружать плейлист между сессиями</li>
-            <li>Автоматически подстраивать интерфейс под размер окна</li>
+            <li>Воспроизведение, пауза, перемотка, переключение треков</li>
+            <li>Управление громкостью</li>
+            <li>Сохранение/загрузка плейлиста между сессиями</li>
+            <li>Адаптивный интерфейс</li>
           </ul>
 
-          <Typography variant="h6" gutterBottom>Как собрать</Typography>
-          <ol>
-            <li>Установите Qt 6.x и CMake</li>
-            <li>Клонируйте репозиторий и перейдите в папку проекта</li>
-            <li>Убедитесь, что в папке <code>mpv/</code> лежат файлы <code>libmpv-2.dll</code> и <code>libmpv.dll.a</code></li>
-            <li>Соберите проект с помощью CMake и Ninja</li>
-            <li>Запустите <code>TextRedactor.exe</code></li>
-          </ol>
-
-          <Typography variant="h6" gutterBottom>Зависимости</Typography>
+          <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
+            Требования
+          </Typography>
           <ul>
             <li>Qt 6.x</li>
-            <li>mpv</li>
+            <li>CMake ≥ 3.20 и Ninja</li>
+            <li>libmpv (binaries + headers)</li>
           </ul>
 
-          <Typography variant="h6" gutterBottom>Структура проекта</Typography>
+          <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
+            Как поставить libmpv
+          </Typography>
+          <Typography variant="body1" paragraph>
+            <strong>Windows (PowerShell):</strong> используйте скрипт <code>./scripts/fetch_mpv_win.ps1</code>, он скачает и положит файлы в <code>mpv/</code>.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            <strong>Linux (Debian/Ubuntu):</strong> chmod +x ./scripts/fetch_mpv_linux.sh и ./scripts/fetch_mpv_linux.sh
+          </Typography>
+
+          <Typography variant="h6" gutterBottom>Сборка</Typography>
+          <ol>
+            <li>Клонируйте репозиторий и перейдите в папку проекта</li>
+            <li>Убедитесь, что в <code>mpv/</code> лежат бинарники и заголовки</li>
+            <li>Соберите проект:
+              <pre style={{ display: 'inline' }}>
+{`mkdir build && cd build
+cmake .. -G "Ninja Multi-Config" -DCMAKE_BUILD_TYPE=Release
+cmake --build . --config Release`}
+              </pre>
+            </li>
+            <li>Запустите исполняемый файл (Windows: <code>TextRedactor.exe</code>)</li>
+          </ol>
+
+          <Typography variant="h4" component="h2" gutterBottom sx={{ color: '#7E57C2' }}>
+            Структура проекта
+          </Typography>
           <pre style={{ background: '#232136', color: '#f8f8f2', padding: '14px', borderRadius: '8px', fontSize: '1.05em', overflowX: 'auto', border: '1px solid #7E57C2' }}>
 {`TextRedactor/
 ├── src/
 │   ├── model/         # Track, TrackListModel
 │   ├── view/          # MainWindow, делегаты
 │   ├── controller/    # PlayerController
-│   └── player/        # Player (mpv)
-├── mpv/               # mpv dll и заголовки
+│   └── player/        # Player (wrapper над libmpv)
+├── mpv/               # libmpv binaries + headers
+├── scripts/           # Скачивание mpv
+├── tests/             # Qt Test
 ├── CMakeLists.txt
 ├── README.md
-└── ...`}
+└── LICENSE`}
           </pre>
 
           <Box sx={{ mt: 3 }}>
-            <Link href="/projects" sx={{ 
+            <Link href="/projects" sx={{
               textDecoration: 'none',
               backgroundColor: '#7E57C2',
               color: 'white',
@@ -111,21 +135,23 @@ const Fifth: React.FC = () => {
               Go Back
             </Link>
           </Box>
+
           <Modal open={open} onClose={handleClose} className="project-lightbox-modal">
             <Box sx={{ outline: 'none' }}>
               {selectedImg && (
                 <img
                   src={selectedImg}
-                  alt="Увеличенное изображение"
+                  alt="Увеличенное изображение QF_player"
                   className="project-lightbox-img"
                 />
               )}
             </Box>
           </Modal>
+
         </Paper>
       </Box>
     </Container>
   );
 };
 
-export default Fifth; 
+export default Fifth;
