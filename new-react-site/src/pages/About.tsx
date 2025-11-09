@@ -9,7 +9,9 @@ const About: React.FC = () => {
     { name: 'VK', url: 'https://vk.com/invokedsoul', icon: <Icons.Public /> },
     { name: 'Github', url: 'https://github.com/fozu7916', icon: <Icons.GitHub /> },
     { name: 'LeetCode', url: 'https://leetcode.com/Fozuzzzxxxccc/', icon: <Icons.Computer /> },
-    { name: 'Stepik', url: 'https://stepik.org/users/621533557/profile', icon: <Icons.School /> }
+    { name: 'Stepik', url: 'https://stepik.org/users/621533557/profile', icon: <Icons.School /> },
+    { name: 'Linkedin', url: 'https://www.linkedin.com/in/алексей-шикин-ab1489398', icon: <Icons.LinkedIn /> }
+
   ];
 
   return (
@@ -29,6 +31,7 @@ const About: React.FC = () => {
                 <li>Разработка на C++ с использованием QT, WinForms и SFML</li>
                 <li>Разработка на C# с использованием Unity, ASP.NET, Avalonia и MAUI</li>
                 <li>Разработка на JavaScript/TypeScript с использованием React</li>
+                <li>Разработка на Python с использованием Flask, Jango</li>
               </ul>
               <Typography variant="body1" paragraph>
                 Я постоянно учусь и развиваюсь, изучая новые технологии и подходы к разработке.

@@ -34,19 +34,27 @@ export const projectsData: ProjectData[] = [
       'Avalonia and maUI'
     ],
     projects: [
-      { name: 'Unity psyho horror', status: 'WIP' },
-      { name: 'Web app Login + smth', status: 'WIP' },
-      { name: 'GUI avalonia app', status: 'WIP' },
-      { name: 'GUI maui app', status: 'WIP' }
+      { name: 'None', link: '' }
     ]
   },
   {
     title: 'TypeScript',
     frameworks: [
-      'React'
+      'React',
+      'css'
     ],
     projects: [
       { name: 'AlekseyBook', link: '/react/first' }
     ]
-  }
+  },
+  {
+    title: 'Python',
+    frameworks: [
+      'Jango',
+      'Flask'
+    ],
+    projects: [
+      { name: 'None', link: '' }
+    ]
+  },
 ]; 
