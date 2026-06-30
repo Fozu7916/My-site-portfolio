@@ -46,7 +46,7 @@ const Fourth: React.FC = () => {
               Github repository:{' '}
             </Typography>
             <Link 
-              href="https://github.com/Fozu7916/Login-balance-qt-" 
+              href="https://github.com/Fozu7916/Login-balance-qt" 
               target="_blank"
               rel="noopener noreferrer"
               sx={{ color: '#7E57C2' }}

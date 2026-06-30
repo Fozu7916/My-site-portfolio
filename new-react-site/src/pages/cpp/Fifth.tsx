@@ -43,7 +43,7 @@ const Fifth: React.FC = () => {
               Github repository:{' '}
             </Typography>
             <Link
-              href="https://github.com/Fozu7916/TextRedactor/tree/main"
+              href="https://github.com/Fozu7916/QF_Player"
               target="_blank"
               rel="noopener noreferrer"
               sx={{ color: '#7E57C2' }}

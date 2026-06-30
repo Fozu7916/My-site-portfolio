@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { profile } from '../data/profile';
 import './Header.css';
 
 const navLinks = [
@@ -49,7 +50,7 @@ const Header: React.FC = () => {
               {label}
             </Link>
           ))}
-          <a href="mailto:alekseylis211@mail.ru" className="site-header__cta">
+          <a href={`mailto:${profile.email}`} className="site-header__cta">
             Hire me
           </a>
         </nav>

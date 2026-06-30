@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ProjectData } from '../data/Projects';
 import '../styles/Projects.css';
 
-const accentColors = ['#6366f1', '#512bd4', '#22d3ee', '#a78bfa'];
+const accentColors = ['#512bd4', '#6366f1', '#22d3ee', '#a78bfa'];
 
 interface ProjectCardProps {
   section: ProjectData;
@@ -24,7 +24,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ section, index }) => {
         <span className="project-card__index">
           {String(index + 1).padStart(2, '0')}
         </span>
-        <h2 className="project-card__title">{section.title}</h2>
+        <h2 className="project-card__title">
+          <span className="project-card__emoji">{section.emoji}</span>
+          {section.title}
+        </h2>
       </header>
 
       <div className="project-card__section">
@@ -40,20 +43,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ section, index }) => {
         <h3 className="project-card__label">Projects</h3>
         <ul className="project-card__projects">
           {section.projects.map((project) => (
-            <li key={project.name}>
-              {project.link ? (
-                <Link to={project.link} className="project-card__link">
-                  <span>{project.name}</span>
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                    <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </Link>
-              ) : (
-                <span className="project-card__name">
-                  {project.name}
-                  {project.status && ` (${project.status})`}
-                </span>
-              )}
+            <li key={project.name} className="project-card__project">
+              <div className="project-card__project-info">
+                <span className="project-card__project-name">{project.name}</span>
+                <span className="project-card__project-desc">{project.description}</span>
+              </div>
+              <div className="project-card__project-actions">
+                {project.link && (
+                  <Link to={project.link} className="project-card__action project-card__action--view">
+                    Showcase
+                  </Link>
+                )}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-card__action project-card__action--github"
+                >
+                  GitHub
+                </a>
+              </div>
             </li>
           ))}
         </ul>

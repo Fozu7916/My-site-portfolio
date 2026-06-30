@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { profile } from '../data/profile';
 import './Footer.css';
 
 const Footer: React.FC = () => {
@@ -11,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="site-footer__brand">
           <Link to="/" className="site-footer__logo">Fozu</Link>
           <p className="site-footer__tagline">
-            .NET Backend Developer · Clean Architecture · Strong Algorithms
+            {profile.role} · Clean Architecture · Strong Algorithms
           </p>
         </div>
 
@@ -25,15 +26,16 @@ const Footer: React.FC = () => {
           </div>
           <div className="site-footer__col">
             <span className="site-footer__col-title">Connect</span>
-            <a href="mailto:alekseylis211@mail.ru">alekseylis211@mail.ru</a>
-            <a href="https://github.com/Fozu7916" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://github.com/Fozu7916/My-site-portfolio" target="_blank" rel="noopener noreferrer">Source Code</a>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+            <a href="https://t.me/FozuZXC" target="_blank" rel="noopener noreferrer">{profile.telegram}</a>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href={profile.leetcode} target="_blank" rel="noopener noreferrer">LeetCode</a>
           </div>
         </div>
       </div>
 
       <div className="site-footer__bottom">
-        <span>© {year} Shikin Aleksey</span>
+        <span>© {year} {profile.name}</span>
         <span className="site-footer__made">Built with React & TypeScript</span>
       </div>
     </footer>

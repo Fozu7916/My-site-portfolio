@@ -1,60 +1,86 @@
+export interface ProjectItem {
+  name: string;
+  description: string;
+  link?: string;
+  github: string;
+  status?: string;
+}
+
 export interface ProjectData {
   title: string;
+  emoji: string;
   frameworks: string[];
-  projects: Array<{
-    name: string;
-    link?: string;
-    status?: string;
-  }>;
+  projects: ProjectItem[];
 }
 
 export const projectsData: ProjectData[] = [
   {
-    title: 'C# (.NET Backend)',
+    title: 'Fullstack (.NET + React)',
+    emoji: '💙',
     frameworks: [
       'ASP.NET Core',
       'Entity Framework Core',
       'PostgreSQL',
-      'MySQL',
-      'Docker'
+      'React',
+      'TypeScript',
     ],
     projects: [
-      { name: 'AlekseyBook (Social Network)', link: '/react/alekseybook' }
-    ]
+      {
+        name: 'AlekseyBook',
+        description: 'Social Network',
+        link: '/react/alekseybook',
+        github: 'https://github.com/Fozu7916/AlekseyBook',
+      },
+    ],
   },
   {
-    title: 'C++ (Algorithms & Desktop)',
-    frameworks: [
-      'QT',
-      'MVC Architecture',
-      'libmpv',
-      'SQL'
-    ],
+    title: 'C++ (Desktop & Algorithms)',
+    emoji: '⚙️',
+    frameworks: ['Qt', 'MVC Architecture', 'libmpv', 'SQL'],
     projects: [
-      { name: 'QF_player (Music Player)', link: '/cpp/fifth' },
-      { name: 'Bank System', link: '/cpp/fourth' },
-      { name: 'Password Generator', link: '/cpp/second' }
-    ]
+      {
+        name: 'QF Player',
+        description: 'Music Player',
+        link: '/cpp/fifth',
+        github: 'https://github.com/Fozu7916/QF_Player',
+      },
+      {
+        name: 'Bank System',
+        description: 'Banking Application',
+        link: '/cpp/fourth',
+        github: 'https://github.com/Fozu7916/Login-balance-qt',
+      },
+      {
+        name: 'Password Generator',
+        description: 'Desktop Utility',
+        link: '/cpp/second',
+        github: 'https://github.com/Fozu7916/Password-Generator-QT',
+      },
+    ],
   },
   {
     title: 'Frontend (React/TS)',
-    frameworks: [
-      'React',
-      'TypeScript',
-      'MUI'
-    ],
+    emoji: '⚛️',
+    frameworks: ['React', 'TypeScript', 'Framer Motion'],
     projects: [
-      { name: 'Portfolio Website', link: '/portfolio' }
-    ]
+      {
+        name: 'Portfolio',
+        description: 'Personal Portfolio',
+        link: '/portfolio',
+        github: 'https://github.com/Fozu7916/My-site-portfolio',
+      },
+    ],
   },
   {
-    title: 'Python (Scripting & Automation)',
-    frameworks: [
-      'Flask',
-      'Django'
-    ],
+    title: 'Python',
+    emoji: '🐍',
+    frameworks: ['Python'],
     projects: [
-      { name: 'Hackathon Project', link: '/cpp/first' }
-    ]
+      {
+        name: 'Hackathon Project',
+        description: 'Team Project (ProTechno)',
+        github: 'https://github.com/Fozu7916/HacatonProTechno',
+      },
+    ],
   },
 ];

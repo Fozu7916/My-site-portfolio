@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Modal } from '@mui/material';
 import { motion } from 'framer-motion';
 import PageHeader from '../components/PageHeader';
+import { scienceAchievements, itAchievements } from '../data/profile';
 import '../styles/HallOfFame.css';
 
 const HallOfFame: React.FC = () => {
@@ -33,11 +34,11 @@ const HallOfFame: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <h2 className="hof-section__title">Научные достижения</h2>
+          <h2 className="hof-section__title">🔬 Наука</h2>
           <ul className="hof-list">
-            <li>Призер/участник заключительных этапов: Высшая Проба, Изумруд, Бельчонок, Газпром, Шаг в будущее, ОММО.</li>
-            <li>2 место на конференции «Леонардо» (Москва), член ГИР (фонд одарённых детей).</li>
-            <li>Публикация в рамках «Енисейской теплофизики».</li>
+            {scienceAchievements.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </motion.section>
 
@@ -47,9 +48,11 @@ const HallOfFame: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.1 }}
         >
-          <h2 className="hof-section__title">IT Достижения</h2>
+          <h2 className="hof-section__title">💻 IT</h2>
           <ul className="hof-list">
-            <li>Оффер в «Апогей 1С» (по итогам хакатона).</li>
+            {itAchievements.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </motion.section>
 
@@ -59,10 +62,10 @@ const HallOfFame: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.2 }}
         >
-          <h2 className="hof-section__title">Профессиональные курсы</h2>
+          <h2 className="hof-section__title">📚 Профессиональные курсы</h2>
 
           <div className="hof-course">
-            <p className="hof-course__text">1) Прошел курс от Яндекса по С++</p>
+            <p className="hof-course__text">Курс от Яндекса по C++</p>
             <button
               type="button"
               className="hof-course__img-btn"
@@ -73,7 +76,7 @@ const HallOfFame: React.FC = () => {
           </div>
 
           <div className="hof-course">
-            <p className="hof-course__text">2) Пройдены курсы по «промышленному» программированию на С++ от VK</p>
+            <p className="hof-course__text">Курсы по промышленному программированию на C++ от VK (Stepik)</p>
             <button
               type="button"
               className="hof-course__img-btn"

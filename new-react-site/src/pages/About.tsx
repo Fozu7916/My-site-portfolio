@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PageHeader from '../components/PageHeader';
+import SocialLinks from '../components/SocialLinks';
+import {
+  profile,
+  education,
+  itAchievements,
+} from '../data/profile';
 import '../styles/About.css';
 
 const skills = [
@@ -11,26 +17,11 @@ const skills = [
   },
   {
     category: 'Frontend',
-    items: ['React', 'TypeScript', 'Material UI'],
+    items: ['React', 'TypeScript'],
   },
   {
-    category: 'Languages & System',
-    items: ['C# (.NET)', 'C++ (Qt, MVC, libmpv)', 'Python'],
-  },
-];
-
-const achievements = [
-  {
-    title: 'Offer',
-    text: 'Получил оффер в «Апогей 1С» после хакатона (отсев 60% команд).',
-  },
-  {
-    title: 'Fullstack',
-    text: 'Архитектор и разработчик соцсети AlekseyBook (React + .NET).',
-  },
-  {
-    title: 'Architecture',
-    text: 'Глубокое понимание MVC и принципов проектирования ПО.',
+    category: 'Other',
+    items: ['C++ (Qt, MVC, libmpv)', 'Python', 'Linux', 'Git'],
   },
 ];
 
@@ -38,8 +29,8 @@ const About: React.FC = () => (
   <div className="about-page">
     <PageHeader
       label="About Me"
-      title="Shikin Aleksey"
-      description=".NET Backend Developer с сильной алгоритмической базой и опытом системного программирования на C++."
+      title={profile.name}
+      description={`${profile.role} с сильной алгоритмической базой, опытом олимпиадной математики и системного программирования на C++.`}
     />
 
     <div className="about-layout">
@@ -59,21 +50,16 @@ const About: React.FC = () => (
           Open to new challenges
         </div>
 
-        <h2 className="about-sidebar__role">.NET Backend Developer</h2>
+        <h2 className="about-sidebar__role">{profile.role}</h2>
 
-        <div className="about-sidebar__actions">
-          <a href="mailto:alekseylis211@mail.ru" className="btn btn--primary btn--sm">
-            Связаться
-          </a>
-          <a
-            href="https://github.com/Fozu7916"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn--ghost btn--sm"
-          >
-            GitHub
+        <div className="about-sidebar__contact">
+          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          <a href="https://t.me/FozuZXC" target="_blank" rel="noopener noreferrer">
+            {profile.telegram}
           </a>
         </div>
+
+        <SocialLinks variant="column" />
       </motion.aside>
 
       <motion.div
@@ -108,19 +94,36 @@ const About: React.FC = () => (
         </section>
 
         <section className="about-block">
-          <h3 className="about-block__title">Ключевые достижения</h3>
+          <h3 className="about-block__title">Образование</h3>
+          <ul className="about-list">
+            {education.schools.map((school) => (
+              <li key={school}>{school}</li>
+            ))}
+            <li>{education.certificate}</li>
+          </ul>
+          <div className="about-ege">
+            {education.ege.map((item) => (
+              <div key={item.subject} className="about-ege__item">
+                <span className="about-ege__score">{item.score}</span>
+                <span className="about-ege__subject">{item.subject}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="about-block">
+          <h3 className="about-block__title">IT-достижения</h3>
           <div className="about-achievements">
-            {achievements.map((item) => (
-              <div key={item.title} className="about-achievement">
-                <span className="about-achievement__title">{item.title}</span>
-                <p className="about-achievement__text">{item.text}</p>
+            {itAchievements.map((text) => (
+              <div key={text} className="about-achievement">
+                <p className="about-achievement__text">{text}</p>
               </div>
             ))}
           </div>
         </section>
 
         <Link to="/hall-of-fame" className="about-hof-link">
-          Смотреть Hall of Fame →
+          Смотреть Hall of Fame (наука, курсы) →
         </Link>
       </motion.div>
     </div>

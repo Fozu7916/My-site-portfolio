@@ -87,7 +87,26 @@
   color: var(--text-muted);
   line-height: 1.75;
   max-width: 520px;
-  margin-bottom: 36px;
+  margin-bottom: 16px;
+}
+
+.hero__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.hero__contact {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.hero__contact:hover {
+  color: var(--accent-secondary);
 }
 
 .hero__actions {
@@ -251,23 +270,11 @@
 
 .featured-card {
   position: relative;
-  display: block;
-  padding: 28px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  text-decoration: none;
-  transition: all var(--transition);
   overflow: hidden;
-}
-
-.featured-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-surface);
-  opacity: 0;
-  transition: opacity var(--transition);
+  transition: all var(--transition);
 }
 
 .featured-card:hover {
@@ -276,7 +283,24 @@
   box-shadow: var(--shadow-glow);
 }
 
-.featured-card:hover::before {
+.featured-card__main {
+  display: block;
+  padding: 28px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-card__main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-surface);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.featured-card:hover .featured-card__main::before {
   opacity: 1;
 }
 
@@ -410,11 +434,33 @@
   margin: 0 auto 32px;
 }
 
+.featured-card__github {
+  display: block;
+  padding: 10px 28px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-light);
+  text-align: center;
+  text-decoration: none;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all var(--transition);
+}
+
+.featured-card__github:hover {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--accent-secondary);
+}
+
 .cta__actions {
   display: flex;
   justify-content: center;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+.cta .social-links {
+  justify-content: center;
 }
 
 /* ── Responsive ── */
