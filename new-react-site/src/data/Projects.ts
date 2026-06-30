@@ -10,51 +10,51 @@ export interface ProjectData {
 
 export const projectsData: ProjectData[] = [
   {
-    title: 'C++',
+    title: 'C# (.NET Backend)',
+    frameworks: [
+      'ASP.NET Core',
+      'Entity Framework Core',
+      'PostgreSQL',
+      'MySQL',
+      'Docker'
+    ],
+    projects: [
+      { name: 'AlekseyBook (Social Network)', link: '/react/alekseybook' }
+    ]
+  },
+  {
+    title: 'C++ (Algorithms & Desktop)',
     frameworks: [
       'QT',
-      'Winforms(CLI/С++)',
-      'SFML',
-      'Connect SQL(MySQL and SQLite)'
+      'MVC Architecture',
+      'libmpv',
+      'SQL'
     ],
     projects: [
-      { name: 'Winform app User control', link: '/cpp/first' },
-      { name: 'QT app Password Generator', link: '/cpp/second' },
-      { name: 'SQL-database(console + SQL)', link: '/cpp/third' },
-      { name: 'Qt program simulating bank', link: '/cpp/fourth' },
-      { name: 'QF_player — Музыкальный плеер на Qt', link: '/cpp/fifth' }
+      { name: 'QF_player (Music Player)', link: '/cpp/fifth' },
+      { name: 'Bank System', link: '/cpp/fourth' },
+      { name: 'Password Generator', link: '/cpp/second' }
     ]
   },
   {
-    title: 'C#(.NET)',
-    frameworks: [
-      'Unity',
-      'Winforms',
-      'Web(ASP.NET)',
-      'Avalonia and maUI'
-    ],
-    projects: [
-      { name: 'None', link: '' }
-    ]
-  },
-  {
-    title: 'TypeScript',
+    title: 'Frontend (React/TS)',
     frameworks: [
       'React',
-      'css'
+      'TypeScript',
+      'MUI'
     ],
     projects: [
-      { name: 'AlekseyBook', link: '/react/first' }
+      { name: 'Portfolio Website', link: '/portfolio' }
     ]
   },
   {
-    title: 'Python',
+    title: 'Python (Scripting & Automation)',
     frameworks: [
-      'Jango',
-      'Flask'
+      'Flask',
+      'Django'
     ],
     projects: [
-      { name: 'None', link: '' }
+      { name: 'Hackathon Project', link: '/cpp/first' }
     ]
   },
-]; 
+];

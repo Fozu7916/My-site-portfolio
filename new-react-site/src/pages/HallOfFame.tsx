@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Container, Typography, Box, Paper, Modal } from '@mui/material';
+import { Box, Modal } from '@mui/material';
+import { motion } from 'framer-motion';
+import PageHeader from '../components/PageHeader';
 import '../styles/HallOfFame.css';
 
 const HallOfFame: React.FC = () => {
@@ -17,67 +19,85 @@ const HallOfFame: React.FC = () => {
   };
 
   return (
-    <Container maxWidth="lg">
-      <div className="halloffame-container">
-        <Box sx={{ mt: 4, mb: 4 }}>
-          <Paper 
-            className="halloffame-paper"
-            elevation={3} 
-            sx={{ 
-              p: 4,
-              backgroundColor: 'rgba(33, 33, 33, 0.92)',
-              color: 'white',
-              borderRadius: '18px',
-              overflow: 'hidden'
-            }}
-          >
-            <Typography variant="h3" component="h1" gutterBottom>
-              Hall of Fame
-            </Typography>
+    <div className="hof-page">
+      <PageHeader
+        label="Achievements"
+        title="Hall of Fame"
+        description="Научные олимпиады, IT-достижения и профессиональное обучение."
+      />
 
-            <Typography variant="body1" paragraph>
-              1) Прошел курс от Яндекса по С++
-            </Typography>
+      <div className="hof-sections">
+        <motion.section
+          className="hof-section"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <h2 className="hof-section__title">Научные достижения</h2>
+          <ul className="hof-list">
+            <li>Призер/участник заключительных этапов: Высшая Проба, Изумруд, Бельчонок, Газпром, Шаг в будущее, ОММО.</li>
+            <li>2 место на конференции «Леонардо» (Москва), член ГИР (фонд одарённых детей).</li>
+            <li>Публикация в рамках «Енисейской теплофизики».</li>
+          </ul>
+        </motion.section>
 
+        <motion.section
+          className="hof-section"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        >
+          <h2 className="hof-section__title">IT Достижения</h2>
+          <ul className="hof-list">
+            <li>Оффер в «Апогей 1С» (по итогам хакатона).</li>
+          </ul>
+        </motion.section>
+
+        <motion.section
+          className="hof-section"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+        >
+          <h2 className="hof-section__title">Профессиональные курсы</h2>
+
+          <div className="hof-course">
+            <p className="hof-course__text">1) Прошел курс от Яндекса по С++</p>
             <button
               type="button"
-              className="project-showcase-img-btn"
+              className="hof-course__img-btn"
               onClick={() => handleOpen('images/Yandex.png')}
-              style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
             >
-              <img src="images/Yandex.png" alt="Yandex Award" className="halloffame-image" />
+              <img src="images/Yandex.png" alt="Yandex Certificate" className="hof-course__img" />
             </button>
+          </div>
 
-            <Typography variant="body1" paragraph>
-              2) Пройдены курсы по &quot;промышленному&quot; программированию на С++ от вк
-            </Typography>
-
+          <div className="hof-course">
+            <p className="hof-course__text">2) Пройдены курсы по «промышленному» программированию на С++ от VK</p>
             <button
               type="button"
-              className="project-showcase-img-btn"
+              className="hof-course__img-btn"
               onClick={() => handleOpen('images/Stepik.png')}
-              style={{ background: 'none', border: 'none', padding: 0, margin: 0, cursor: 'pointer' }}
             >
-              <img src="images/Stepik.png" alt="Yandex Award" className="halloffame-image" />
+              <img src="images/Stepik.png" alt="Stepik Certificate" className="hof-course__img" />
             </button>
-
-
-          </Paper>
-        </Box>
+          </div>
+        </motion.section>
       </div>
-      <Modal open={open} onClose={handleClose} className="project-lightbox-modal">
+
+      <Modal open={open} onClose={handleClose} className="hof-lightbox">
         <Box sx={{ outline: 'none' }}>
           {selectedImg && (
             <img
               src={selectedImg}
               alt="Увеличенное изображение"
-              className="project-lightbox-img"
+              className="hof-lightbox__img"
             />
           )}
         </Box>
       </Modal>
-    </Container>
+    </div>
   );
 };
 
-export default HallOfFame; 
+export default HallOfFame;
