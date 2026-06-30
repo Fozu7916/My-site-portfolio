@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PageHeader from '../components/PageHeader';
+import Avatar from '../components/Avatar';
 import SocialLinks from '../components/SocialLinks';
 import {
   profile,
@@ -40,10 +41,7 @@ const About: React.FC = () => (
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="about-avatar">
-          <span className="about-avatar__initials">SA</span>
-          <div className="about-avatar__ring" />
-        </div>
+        <Avatar size="md" />
 
         <div className="about-status">
           <span className="about-status__dot" />

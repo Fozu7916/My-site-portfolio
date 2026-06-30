@@ -7,14 +7,16 @@ export const profile = {
   portfolio: 'https://fozu-portfolio.netlify.app',
   github: 'https://github.com/Fozu7916',
   leetcode: 'https://leetcode.com/u/Fozuzzzxxxccc/',
+  /** Положи фото в public/images/avatar.jpg — путь захардкожен здесь */
+  avatar: '/images/avatar.jpg',
 };
 
 export const socialLinks = [
-  { label: 'Portfolio', href: profile.portfolio, icon: 'portfolio' },
-  { label: 'Gmail', href: `mailto:${profile.email}`, icon: 'email' },
-  { label: 'Telegram', href: 'https://t.me/FozuZXC', icon: 'telegram' },
-  { label: 'GitHub', href: profile.github, icon: 'github' },
-  { label: 'LeetCode', href: profile.leetcode, icon: 'leetcode' },
+  { label: 'Portfolio', href: profile.portfolio },
+  { label: 'Gmail', href: `mailto:${profile.email}` },
+  { label: 'Telegram', href: 'https://t.me/FozuZXC' },
+  { label: 'GitHub', href: profile.github },
+  { label: 'LeetCode', href: profile.leetcode },
 ];
 
 export const education = {
@@ -41,4 +43,5 @@ export const itAchievements = [
   'Оффер в «Апогей 1С» после хакатона (отсеялось 60% команд)',
   'Fullstack-проект AlekseyBook — соцсеть на React + ASP.NET Core',
   'Desktop-приложения на C++/Qt с MVC-архитектурой и libmpv',
+  'HacatonProTechno — медиахаб для молодёжного центра (Streamlit + VK API)',
 ];

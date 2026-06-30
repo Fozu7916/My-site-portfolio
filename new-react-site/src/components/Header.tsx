@@ -42,7 +42,8 @@ const Header: React.FC = () => {
               className={`site-header__link ${
                 location.pathname === to ||
                 (to === '/projects' && location.pathname.startsWith('/cpp')) ||
-                (to === '/projects' && location.pathname.startsWith('/react'))
+                (to === '/projects' && location.pathname.startsWith('/react')) ||
+                (to === '/projects' && location.pathname.startsWith('/python'))
                   ? 'site-header__link--active'
                   : ''
               }`}

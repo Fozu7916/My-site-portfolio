@@ -116,9 +116,22 @@
 }
 
 /* Code window */
+.hero__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.hero__avatar-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 .hero__code {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .code-window {
@@ -471,8 +484,13 @@
     padding-top: 20px;
   }
 
-  .hero__code {
+  .hero__visual {
     order: -1;
+  }
+
+  .hero__avatar-wrap .avatar--lg {
+    width: 100px;
+    height: 100px;
   }
 
   .stats {

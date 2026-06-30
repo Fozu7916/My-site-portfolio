@@ -15,6 +15,7 @@ import Fourth from './pages/cpp/Fourth';
 import Fifth from './pages/cpp/Fifth';
 import HallOfFame from './pages/HallOfFame';
 import ReactFirst from './pages/react/ReactFirst';
+import HacatonProTechno from './pages/python/HacatonProTechno';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/cpp/fourth" element={<Fourth />} />
             <Route path="/cpp/fifth" element={<Fifth />} />
             <Route path="/react/alekseybook" element={<ReactFirst />} />
+            <Route path="/python/hacaton" element={<HacatonProTechno />} />
           </Routes>
         </main>
         <Footer />

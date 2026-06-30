@@ -74,11 +74,12 @@ export const projectsData: ProjectData[] = [
   {
     title: 'Python',
     emoji: '🐍',
-    frameworks: ['Python'],
+    frameworks: ['Python', 'Streamlit', 'MySQL', 'VK API'],
     projects: [
       {
         name: 'Hackathon Project',
-        description: 'Team Project (ProTechno)',
+        description: 'Медиахаб · Streamlit + VK API + MySQL',
+        link: '/python/hacaton',
         github: 'https://github.com/Fozu7916/HacatonProTechno',
       },
     ],

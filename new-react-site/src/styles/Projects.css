@@ -15,13 +15,34 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: all var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.project-card__border-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--card-accent, var(--accent)) 50%, transparent),
+    transparent 50%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.project-card:hover .project-card__border-glow {
+  opacity: 1;
 }
 
 .project-card:hover {
   border-color: color-mix(in srgb, var(--card-accent, var(--accent)) 40%, transparent);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35),
+    0 0 0 1px color-mix(in srgb, var(--card-accent, var(--accent)) 15%, transparent);
 }
 
 .project-card__glow {

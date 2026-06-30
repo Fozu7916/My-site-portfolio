@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Avatar from '../components/Avatar';
 import SocialLinks from '../components/SocialLinks';
 import { profile } from '../data/profile';
 import { projectsData } from '../data/Projects';
@@ -31,12 +32,12 @@ const featuredProjects = [
     color: '#6366f1',
   },
   {
-    name: 'Bank System',
-    desc: 'Banking Application · Qt Widgets',
-    link: '/cpp/fourth',
-    github: 'https://github.com/Fozu7916/Login-balance-qt',
-    tag: 'Qt',
-    color: '#22d3ee',
+    name: 'HacatonProTechno',
+    desc: 'Медиахаб · Streamlit + VK API + Worker',
+    link: '/python/hacaton',
+    github: 'https://github.com/Fozu7916/HacatonProTechno',
+    tag: 'Python',
+    color: '#10b981',
   },
 ];
 
@@ -89,11 +90,14 @@ const Home: React.FC = () => (
       </motion.div>
 
       <motion.div
-        className="hero__code"
+        className="hero__visual"
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
+        <div className="hero__avatar-wrap">
+          <Avatar size="lg" />
+        </div>
         <div className="code-window">
           <div className="code-window__bar">
             <span /><span /><span />

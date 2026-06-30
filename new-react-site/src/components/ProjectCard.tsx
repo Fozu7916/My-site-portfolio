@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { ProjectData } from '../data/Projects';
 import '../styles/Projects.css';
 
-const accentColors = ['#512bd4', '#6366f1', '#22d3ee', '#a78bfa'];
+const accentColors = ['#512bd4', '#6366f1', '#22d3ee', '#10b981'];
 
 interface ProjectCardProps {
   section: ProjectData;
@@ -14,11 +15,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ section, index }) => {
   const accent = accentColors[index % accentColors.length];
 
   return (
-    <article
+    <motion.article
       className="project-card"
       style={{ '--card-accent': accent } as React.CSSProperties}
+      initial={{ opacity: 0, y: 32 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      whileHover={{ y: -6, transition: { duration: 0.2 } }}
     >
       <div className="project-card__glow" />
+      <div className="project-card__border-glow" aria-hidden="true" />
 
       <header className="project-card__header">
         <span className="project-card__index">
@@ -42,8 +48,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ section, index }) => {
       <div className="project-card__section">
         <h3 className="project-card__label">Projects</h3>
         <ul className="project-card__projects">
-          {section.projects.map((project) => (
-            <li key={project.name} className="project-card__project">
+          {section.projects.map((project, pi) => (
+            <motion.li
+              key={project.name}
+              className="project-card__project"
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 + pi * 0.06 + 0.2 }}
+            >
               <div className="project-card__project-info">
                 <span className="project-card__project-name">{project.name}</span>
                 <span className="project-card__project-desc">{project.description}</span>
@@ -63,11 +75,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ section, index }) => {
                   GitHub
                 </a>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
-    </article>
+    </motion.article>
   );
 };
 
