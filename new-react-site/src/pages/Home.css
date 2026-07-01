@@ -391,6 +391,29 @@
   border-color: var(--border-accent);
 }
 
+.stack-chip--priority {
+  grid-column: 1 / -1;
+  background: var(--gradient-surface);
+  border-color: rgba(81, 43, 212, 0.35);
+  position: relative;
+}
+
+.stack-chip__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c4b5fd;
+  background: rgba(81, 43, 212, 0.2);
+  border: 1px solid rgba(81, 43, 212, 0.4);
+  border-radius: 100px;
+}
+
 .stack-chip__title {
   display: block;
   font-family: var(--font-display);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { profile } from '../data/profile';
+import { useContactModal } from '../context/ContactModalContext';
 import './Header.css';
 
 const navLinks = [
@@ -15,6 +15,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { openContact } = useContactModal();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -51,9 +52,9 @@ const Header: React.FC = () => {
               {label}
             </Link>
           ))}
-          <a href={`mailto:${profile.email}`} className="site-header__cta">
+          <button type="button" className="site-header__cta" onClick={openContact}>
             Hire me
-          </a>
+          </button>
         </nav>
 
         <button

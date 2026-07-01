@@ -5,13 +5,14 @@ import Avatar from '../components/Avatar';
 import SocialLinks from '../components/SocialLinks';
 import { profile } from '../data/profile';
 import { projectsData } from '../data/Projects';
+import { useContactModal } from '../context/ContactModalContext';
 import './Home.css';
 
 const stats = [
-  { value: '95', label: 'ЕГЭ проф. математика' },
-  { value: '7+', label: 'Олимпиад и конференций' },
+  { value: '.NET', label: 'Основной стек' },
+  { value: '5+', label: 'Проектов в портфолио' },
   { value: '1', label: 'Оффер после хакатона' },
-  { value: '4', label: 'Языка / стека' },
+  { value: 'API', label: 'REST · EF Core · Docker' },
 ];
 
 const featuredProjects = [
@@ -41,7 +42,10 @@ const featuredProjects = [
   },
 ];
 
-const Home: React.FC = () => (
+const Home: React.FC = () => {
+  const { openContact } = useContactModal();
+
+  return (
   <div className="home">
     <section className="hero">
       <motion.div
@@ -85,7 +89,7 @@ const Home: React.FC = () => (
             </svg>
           </Link>
           <Link to="/about" className="btn btn--ghost">Обо мне</Link>
-          <a href={`mailto:${profile.email}`} className="btn btn--ghost">Написать</a>
+          <button type="button" className="btn btn--ghost" onClick={openContact}>Написать</button>
         </div>
       </motion.div>
 
@@ -182,11 +186,12 @@ const Home: React.FC = () => (
         {projectsData.map((section, i) => (
           <motion.div
             key={section.title}
-            className="stack-chip"
+            className={`stack-chip${section.priority ? ' stack-chip--priority' : ''}`}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6 + i * 0.06 }}
           >
+            {section.priority && <span className="stack-chip__badge">Priority</span>}
             <span className="stack-chip__title">{section.emoji} {section.title}</span>
             <div className="stack-chip__tags">
               {section.frameworks.slice(0, 5).map((fw) => (
@@ -214,6 +219,7 @@ const Home: React.FC = () => (
       </motion.div>
     </section>
   </div>
-);
+  );
+};
 
 export default Home;

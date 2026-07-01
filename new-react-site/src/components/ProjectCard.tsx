@@ -16,8 +16,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ section, index }) => {
 
   return (
     <motion.article
-      className="project-card"
-      style={{ '--card-accent': accent } as React.CSSProperties}
+      className={`project-card${section.priority ? ' project-card--priority' : ''}`}
+      style={{ '--card-accent': section.priority ? '#512bd4' : accent } as React.CSSProperties}
       initial={{ opacity: 0, y: 32 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -33,6 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ section, index }) => {
         <h2 className="project-card__title">
           <span className="project-card__emoji">{section.emoji}</span>
           {section.title}
+          {section.priority && <span className="project-card__priority">Priority</span>}
         </h2>
       </header>
 

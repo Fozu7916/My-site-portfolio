@@ -82,10 +82,12 @@
   padding: 8px 18px;
   font-size: 0.875rem;
   font-weight: 600;
+  font-family: var(--font-body);
   color: #fff;
-  text-decoration: none;
   background: var(--gradient-brand);
+  border: none;
   border-radius: var(--radius-sm);
+  cursor: pointer;
   transition: all var(--transition);
 }
 
