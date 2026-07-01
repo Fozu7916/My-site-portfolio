@@ -41,7 +41,7 @@ export const scienceAchievements = [
 
 export const itAchievements = [
   'Оффер в «Апогей 1С» после хакатона (отсеялось 60% команд)',
-  'Fullstack-проект AlekseyBook — соцсеть на React + ASP.NET Core',
+  'Fullstack-проект Social Network — соцсеть на React + ASP.NET Core',
   'Desktop-приложения на C++/Qt с MVC-архитектурой и libmpv',
   'HacatonProTechno — медиахаб для молодёжного центра (Streamlit + VK API)',
 ];

@@ -5,7 +5,7 @@ import '../styles/Devlog.css';
 
 const devlogEntries = [
   { date: '25.07', year: '2025', content: 'Обновление позиционирования: фокус на .NET Backend, рефакторинг About и Projects' },
-  { date: '20.06', year: '2025', content: 'Добавлен проект AlekseyBook (Social Network)' },
+  { date: '20.06', year: '2025', content: 'Добавлен проект Social Network' },
   { date: '20.06', year: '2025', content: 'Редизайн + создание Hall of Fame' },
   { date: '15.05', year: '2025', content: 'Настройка CI/CD для проекта' },
   { date: '12.04', year: '2025', content: 'Реализация стека React + TypeScript' },

@@ -18,11 +18,13 @@ import Fifth from './pages/cpp/Fifth';
 import HallOfFame from './pages/HallOfFame';
 import ReactFirst from './pages/react/ReactFirst';
 import HacatonProTechno from './pages/python/HacatonProTechno';
+import YandexMetrikaTracker from './components/YandexMetrikaTracker';
 
 function App() {
   return (
     <ContactModalProvider>
       <Router>
+        <YandexMetrikaTracker />
         <div className="app">
           <HeroBackground />
           <Header />

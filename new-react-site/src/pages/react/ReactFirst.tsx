@@ -31,7 +31,7 @@ const First: React.FC = () => {
     <Container maxWidth="md" sx={{ mt: 8, mb: 8 }}>
       <Paper elevation={4} className="project-showcase-paper">
         <Typography variant="h3" gutterBottom sx={{ color: '#b39ddb', fontWeight: 700 }}>
-          AlekseyBook
+          Social Network
         </Typography>
         <Typography variant="h6" gutterBottom color="error">
           ----------Проект закрыт на данный момент------------
@@ -53,7 +53,7 @@ const First: React.FC = () => {
             >
               <img
                 src={src}
-                alt={`AlekseyBook screenshot ${idx + 1}`}
+                alt={`Social Network screenshot ${idx + 1}`}
                 className="project-showcase-image"
               />
             </button>

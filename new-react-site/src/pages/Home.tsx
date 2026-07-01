@@ -17,7 +17,7 @@ const stats = [
 
 const featuredProjects = [
   {
-    name: 'AlekseyBook',
+    name: 'Social Network',
     desc: 'Social Network · ASP.NET Core + React',
     link: '/react/alekseybook',
     github: 'https://github.com/Fozu7916/AlekseyBook',
