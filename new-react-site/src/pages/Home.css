@@ -528,19 +528,112 @@
 @media (max-width: 640px) {
   .stats {
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 18px 12px;
+  }
+
+  .stat-card__value {
+    font-size: 1.5rem;
+  }
+
+  .stat-card__label {
+    font-size: 0.6875rem;
+    line-height: 1.35;
   }
 
   .stacks__grid {
     grid-template-columns: 1fr;
   }
 
+  .stack-chip {
+    padding: 18px 16px;
+  }
+
+  .stack-chip__badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .stack-chip--priority .stack-chip__title {
+    padding-right: 0;
+  }
+
   .cta__card {
-    padding: 40px 24px;
+    padding: 32px 20px;
   }
 
   .featured__header {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+
+  .featured-card__main {
+    padding: 20px;
+  }
+
+  .featured-card__name {
+    font-size: 1.125rem;
+  }
+
+  .hero {
+    padding: 8px 0 48px;
+    gap: 24px;
+  }
+
+  .hero__name {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .hero__role {
+    font-size: 1rem;
+  }
+
+  .hero__pitch {
+    font-size: 0.9375rem;
+  }
+
+  .hero__contacts {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .hero__contact {
+    font-size: 0.75rem;
+    word-break: break-all;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__visual .code-window {
+    display: none;
+  }
+
+  .hero__avatar-wrap .avatar--lg {
+    width: 88px;
+    height: 88px;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .stats {
+    grid-template-columns: 1fr;
   }
 }

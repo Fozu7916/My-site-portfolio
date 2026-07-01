@@ -165,13 +165,28 @@
 
 @media (max-width: 480px) {
   .contact-modal {
-    padding: 16px;
+    padding: 0;
     align-items: flex-end;
   }
 
   .contact-modal__card {
-    padding: 28px 20px 24px;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    width: 100%;
     max-width: 100%;
+    padding: 28px 20px calc(24px + env(safe-area-inset-bottom, 0px));
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    border-bottom: none;
+  }
+
+  .contact-modal__primary {
+    gap: 8px;
+  }
+
+  .contact-modal__link {
+    padding: 14px 16px;
+  }
+
+  .contact-modal__link-value {
+    font-size: 0.8125rem;
+    word-break: break-all;
   }
 }

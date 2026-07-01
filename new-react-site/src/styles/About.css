@@ -267,6 +267,19 @@
 @media (max-width: 480px) {
   .about-block,
   .about-sidebar {
-    padding: 24px 20px;
+    padding: 20px 16px;
+  }
+
+  .about-sidebar__contact a {
+    word-break: break-all;
+  }
+
+  .social-links--column {
+    width: 100%;
+  }
+
+  .social-links--column .social-links__item {
+    justify-content: center;
+    min-height: 44px;
   }
 }

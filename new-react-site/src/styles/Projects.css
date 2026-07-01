@@ -239,6 +239,33 @@
 
 @media (max-width: 480px) {
   .project-card {
-    padding: 24px 20px;
+    padding: 20px 16px;
+  }
+
+  .project-card__header {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .project-card__title {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+
+  .project-card__priority {
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .project-card__project-actions {
+    flex-direction: column;
+  }
+
+  .project-card__action {
+    text-align: center;
+    padding: 10px 14px;
+    min-height: 40px;
   }
 }

@@ -27,6 +27,13 @@ const Header: React.FC = () => {
     setMenuOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   return (
     <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}>
       <div className="site-header__inner">
