@@ -38,7 +38,7 @@ const skills = [
 
     category: 'Other',
 
-    items: ['C++ (Qt, MVC, libmpv)', 'Python', 'Linux', 'Git'],
+    items: ['C++ (Qt, MVC, libmpv, Algo)', 'Python(Exam and automation)', 'Linux', 'Git', 'Docker', 'Kafka','Jira'],
 
   },
 
@@ -55,8 +55,6 @@ const About: React.FC = () => (
       label="About Me"
 
       title={profile.name}
-
-      description={`${profile.role}. Проектирую масштабируемые API, работаю с PostgreSQL и Docker.`}
 
     />
 
@@ -134,9 +132,7 @@ const About: React.FC = () => (
 
             Backend-разработчик с фокусом на экосистему .NET. Проектирую масштабируемые API,
 
-            работаю с базами данных и обеспечиваю чистоту архитектуры. Дополнительно —
-
-            системное программирование на C++ и fullstack-опыт с React.
+            работаю с базами данных и обеспечиваю чистоту архитектуры. Так же имеется Frontend опыт с React+TS.
 
           </p>
 

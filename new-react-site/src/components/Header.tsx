@@ -60,7 +60,7 @@ const Header: React.FC = () => {
             </Link>
           ))}
           <button type="button" className="site-header__cta" onClick={openContact}>
-            Hire me
+            Contact
           </button>
         </nav>
 

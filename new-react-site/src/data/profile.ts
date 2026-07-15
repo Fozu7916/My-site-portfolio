@@ -7,14 +7,10 @@ export const profile = {
   portfolio: 'https://fozu-portfolio.netlify.app',
   github: 'https://github.com/Fozu7916',
   leetcode: 'https://leetcode.com/u/Fozuzzzxxxccc/',
-  /** Положи фото в public/images/avatar.jpg — путь захардкожен здесь */
   avatar: '/images/avatar.jpg',
 };
 
 export const socialLinks = [
-  { label: 'Portfolio', href: profile.portfolio },
-  { label: 'Gmail', href: `mailto:${profile.email}` },
-  { label: 'Telegram', href: 'https://t.me/FozuZXC' },
   { label: 'GitHub', href: profile.github },
   { label: 'LeetCode', href: profile.leetcode },
 ];
@@ -23,6 +19,7 @@ export const education = {
   schools: [
     '9 класс — МБОУ СШ (базовая)',
     '11 класс — физико-математическая школа при СФУ',
+    'Вуз - 😉',
   ],
   certificate: 'Красный аттестат за 9 класс, без троек за 11',
   ege: [
@@ -41,7 +38,4 @@ export const scienceAchievements = [
 
 export const itAchievements = [
   'Оффер в «Апогей 1С» после хакатона (отсеялось 60% команд)',
-  'Fullstack-проект Social Network — соцсеть на React + ASP.NET Core',
-  'Desktop-приложения на C++/Qt с MVC-архитектурой и libmpv',
-  'HacatonProTechno — медиахаб для молодёжного центра (Streamlit + VK API)',
 ];

@@ -66,12 +66,12 @@ const Home: React.FC = () => {
 
         <p className="hero__role">
           <span className="hero__role-accent">{profile.role}</span>
-          {' '}· Competitive Programming with C++
+          {' '} 
         </p>
 
         <p className="hero__pitch">
-          Building backend applications with ASP.NET Core, Entity Framework Core,
-          PostgreSQL and MySQL. Fullstack experience with React + TypeScript.
+          Building backend applications with ASP.NET Core. 
+          Fullstack experience with React + TypeScript.
         </p>
 
         <div className="hero__contacts">

@@ -62,17 +62,7 @@ export const projectsData: ProjectData[] = [
 
     projects: [
 
-      {
 
-        name: 'Social Network API',
-
-        description: 'Backend соцсети · ASP.NET Core + EF Core + PostgreSQL',
-
-        link: '/react/alekseybook',
-
-        github: 'https://github.com/Fozu7916/AlekseyBook',
-
-      },
 
     ],
 
@@ -106,7 +96,32 @@ export const projectsData: ProjectData[] = [
 
   {
 
-    title: 'C++ (Desktop & Algorithms)',
+    title: 'Frontend (React/TS)',
+
+    emoji: '⚛️',
+
+    frameworks: ['React', 'TypeScript', 'Framer Motion'],
+
+    projects: [
+
+      {
+
+        name: 'Portfolio',
+
+        description: 'Personal Portfolio',
+
+        link: '/portfolio',
+
+        github: 'https://github.com/Fozu7916/My-site-portfolio',
+
+      },
+
+    ],
+
+  },
+  {
+
+    title: 'C++ (Previous: GUI desktop && Algorithns)',
 
     emoji: '⚙️',
 
@@ -156,33 +171,7 @@ export const projectsData: ProjectData[] = [
 
   {
 
-    title: 'Frontend (React/TS)',
-
-    emoji: '⚛️',
-
-    frameworks: ['React', 'TypeScript', 'Framer Motion'],
-
-    projects: [
-
-      {
-
-        name: 'Portfolio',
-
-        description: 'Personal Portfolio',
-
-        link: '/portfolio',
-
-        github: 'https://github.com/Fozu7916/My-site-portfolio',
-
-      },
-
-    ],
-
-  },
-
-  {
-
-    title: 'Python',
+    title: 'Python(Previous: Exam`s && Automation)',
 
     emoji: '🐍',
 
