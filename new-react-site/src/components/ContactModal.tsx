@@ -46,9 +46,9 @@ const ContactModal: React.FC = () => {
             </button>
 
             <span className="contact-modal__label">Contact</span>
-            <h2 id="contact-modal-title" className="contact-modal__title">Связаться со мной</h2>
+            <h2 id="contact-modal-title" className="contact-modal__title">Contact me</h2>
             <p className="contact-modal__desc">
-              Открыт к .NET backend-позициям, стажировкам и интересным проектам.
+              Open to .NET backend positions, internships, and interesting projects.
             </p>
 
             <div className="contact-modal__primary">
