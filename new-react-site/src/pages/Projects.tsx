@@ -2,14 +2,14 @@ import React from 'react';
 import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 import { projectsData } from '../data/Projects';
-import '../styles/Projects.css';
+import '../pages/Projects.css';
 
 const Projects: React.FC = () => (
   <div className="projects-page">
     <PageHeader
       label="Portfolio"
-      title="Проекты"
-      description="От backend API на .NET до desktop-приложений на C++/Qt — каждый проект отражает подход к архитектуре и чистому коду."
+      title="Projects"
+      description="From backend APIs in .NET to desktop applications in C++/Qt, each project reflects an approach to architecture and clean code."
     />
 
     <div className="projects-grid">

@@ -1,5 +1,5 @@
 .devlog-page {
-  padding-bottom: 80px;
+  padding-bottom: 96px;
 }
 
 .devlog-timeline {
@@ -10,41 +10,39 @@
 .devlog-timeline::before {
   content: '';
   position: absolute;
-  left: 7px;
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--accent), var(--accent-secondary), transparent);
-  border-radius: 2px;
+  left: 6px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: var(--border-subtle);
 }
 
 .devlog-entry {
   position: relative;
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 24px;
-  padding: 20px 24px;
-  margin-bottom: 12px;
+  grid-template-columns: 84px 1fr;
+  gap: 28px;
+  padding: 22px 28px;
+  margin-bottom: 14px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   transition: border-color var(--transition);
 }
 
 .devlog-entry:hover {
-  border-color: var(--border-accent);
+  border-color: var(--border-hover);
 }
 
 .devlog-entry__marker {
   position: absolute;
   left: -32px;
   top: 28px;
-  width: 16px;
-  height: 16px;
+  width: 13px;
+  height: 13px;
   background: var(--bg-base);
-  border: 2px solid var(--accent);
+  border: 1px solid var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 12px var(--accent-glow);
 }
 
 .devlog-entry__date {
@@ -55,14 +53,14 @@
 
 .devlog-entry__day {
   font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--accent-light);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 .devlog-entry__year {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
 }
 
@@ -78,12 +76,6 @@
   .devlog-entry {
     grid-template-columns: 1fr;
     gap: 8px;
-    padding: 16px 20px;
-  }
-
-  .devlog-entry__date {
-    flex-direction: row;
-    gap: 8px;
-    align-items: baseline;
+    padding: 16px;
   }
 }

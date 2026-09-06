@@ -1,85 +1,108 @@
 :root {
-  --bg-base: #030306;
-  --bg-elevated: rgba(12, 12, 18, 0.72);
-  --bg-card: rgba(255, 255, 255, 0.03);
-  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  /* Resend Canvas, Surface & Borders */
+  --bg-base: #000000;
+  --bg-card: #08080a;
+  --bg-card-hover: #0f1013;
+  --bg-elevated: #0b0e14;
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(99, 102, 241, 0.35);
+  --border-subtle: #222528;
+  --border-hover: #3e4247;
+  --border-accent: #9281f7;
 
-  --text-primary: #f4f4f5;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
+  /* Resend Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #f0f0f0;
+  --text-muted: #a1a4a5;
+  --text-subtle: #6e727a;
 
-  --accent: #6366f1;
-  --accent-light: #818cf8;
-  --accent-glow: rgba(99, 102, 241, 0.45);
-  --accent-secondary: #22d3ee;
-  --accent-dotnet: #512bd4;
+  /* Resend Accents */
+  --accent: #9281f7;
+  --accent-light: #baa7ff;
+  --accent-blue: #3b9eff;
+  --accent-green: #3ad389;
+  --accent-red: #ff9592;
+  --accent-amber: #ffca16;
 
-  --gradient-brand: linear-gradient(135deg, #6366f1 0%, #22d3ee 50%, #a78bfa 100%);
-  --gradient-text: linear-gradient(135deg, #ffffff 0%, #c4b5fd 45%, #67e8f9 100%);
-  --gradient-surface: linear-gradient(160deg, rgba(99, 102, 241, 0.12) 0%, rgba(34, 211, 238, 0.06) 100%);
+  /* Typography */
+  --font-display: 'Domaine', 'aBC Favorit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'Commit Mono', 'JetBrains Mono', SFMono-Regular, Menlo, monospace;
 
-  --font-display: 'Syne', 'Outfit', sans-serif;
-  --font-body: 'DM Sans', 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  /* Strict Radius Scale (Resend Rule: 6px interactive / 16px containers) */
+  --radius-sm: 6px;
+  --radius-md: 6px;
+  --radius-lg: 16px;
+  --radius-xl: 16px;
+  --radius-pill: 9999px;
 
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
-
-  --header-height: 72px;
+  /* Layout & Rhythm */
+  --header-height: 64px;
   --max-width: 1200px;
-  --section-gap: 120px;
+  --section-gap: 64px;
 
-  --shadow-glow: 0 0 60px rgba(99, 102, 241, 0.15);
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Elevation via Borders Only */
+  --shadow-glow: none;
+  --shadow-card: none;
+  --transition: 150ms ease-out;
 }
 
+/* Ghost Buttons (Resend Standard) */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 10px 18px;
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 500;
   text-decoration: none;
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition), background-color var(--transition);
   cursor: pointer;
-  border: none;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  box-shadow: none;
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  transform: none;
+  box-shadow: none;
 }
 
 .btn--primary {
-  background: var(--gradient-brand);
-  color: #fff;
-  box-shadow: 0 4px 24px var(--accent-glow);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  box-shadow: none;
 }
 
 .btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px var(--accent-glow);
-  color: #fff;
+  background: transparent;
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  transform: none;
+  box-shadow: none;
 }
 
 .btn--ghost {
-  background: var(--bg-card);
-  color: var(--text-primary);
-  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
 }
 
 .btn--ghost:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-accent);
+  background: transparent;
+  border-color: var(--border-subtle);
   color: var(--text-primary);
 }
 
 .btn--sm {
-  padding: 10px 18px;
-  font-size: 0.875rem;
+  padding: 8px 14px;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-sm);
   justify-content: center;
 }

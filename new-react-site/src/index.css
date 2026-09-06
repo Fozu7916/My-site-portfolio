@@ -9,13 +9,14 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-base);
 }
 
 body {
   font-family: var(--font-body);
   background-color: var(--bg-base);
-  color: var(--text-primary);
-  line-height: 1.6;
+  color: var(--text-secondary);
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -23,7 +24,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  letter-spacing: -0.04em;
+  font-weight: 400;
 }
 
 p {
@@ -31,13 +34,13 @@ p {
 }
 
 a {
-  color: var(--accent-light);
+  color: var(--accent);
   text-decoration: none;
   transition: color var(--transition);
 }
 
 a:hover {
-  color: var(--accent-secondary);
+  color: var(--accent-light);
 }
 
 ul, ol {
@@ -46,10 +49,12 @@ ul, ol {
 
 code {
   font-family: var(--font-mono);
-  background-color: rgba(255, 255, 255, 0.06);
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
-  font-size: 0.875em;
+  background-color: transparent;
+  color: var(--accent);
+  padding: 2px 6px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.8125em;
 }
 
 button,
@@ -64,20 +69,21 @@ select {
   flex-direction: column;
   min-height: 100vh;
   position: relative;
+  background-color: var(--bg-base);
 }
 
 main {
   flex: 1;
   position: relative;
   z-index: 1;
-  padding: calc(var(--header-height) + 24px) 24px 0;
+  padding: calc(var(--header-height) + 32px) 24px 0;
   max-width: var(--max-width);
   margin: 0 auto;
   width: 100%;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -85,17 +91,17 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 4px;
+  background: var(--border-subtle);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-light);
+  background: var(--text-subtle);
 }
 
 ::selection {
-  background: rgba(99, 102, 241, 0.35);
-  color: #fff;
+  background: rgba(146, 129, 247, 0.25);
+  color: #ffffff;
 }
 
 @media (max-width: 640px) {

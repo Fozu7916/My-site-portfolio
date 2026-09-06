@@ -1,0 +1,225 @@
+.about-page {
+  padding-bottom: 96px;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* Сайдбар */
+.about-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+  padding: 36px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-sidebar .avatar {
+  margin-bottom: 20px;
+}
+
+.about-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--accent-green);
+  margin-bottom: 18px;
+}
+
+.about-status__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+
+.about-sidebar__role {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.about-sidebar__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.about-sidebar__contact a {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+  word-break: break-all;
+}
+
+.about-sidebar__contact a:hover {
+  color: var(--text-primary);
+}
+
+.about-sidebar .social-links {
+  width: 100%;
+}
+
+/* Основной контент */
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-block {
+  padding: 36px 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition);
+}
+
+.about-block:hover {
+  border-color: var(--border-hover);
+}
+
+.about-block__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  margin-bottom: 18px;
+}
+
+.about-block__text {
+  font-size: 1.0625rem;
+  color: #f0f0f0;
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+/* Стек технологий */
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-skill-group__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.about-skill-group__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-skill-tag {
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.about-skill-tag:hover {
+  border-color: var(--border-hover);
+  color: #ffffff;
+}
+
+/* Достижения */
+.about-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-achievement {
+  padding: 16px 20px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+.about-achievement__text {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.about-hof-wrapper {
+  padding-top: 8px;
+}
+
+.about-hof-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.about-hof-link:hover {
+  color: var(--accent-light);
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-block,
+  .about-sidebar {
+    padding: 24px 20px;
+  }
+
+  .about-block__title {
+    font-size: 1.25rem;
+  }
+
+  .about-block__text {
+    font-size: 0.9375rem;
+  }
+}

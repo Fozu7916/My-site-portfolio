@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ProjectData } from '../data/Projects';
-import '../styles/Projects.css';
+import '../pages/Projects.css';
 
 const accentColors = ['#512bd4', '#6366f1', '#22d3ee', '#10b981'];
 

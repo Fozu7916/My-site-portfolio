@@ -1,5 +1,5 @@
 .portfolio-page {
-  padding-bottom: 80px;
+  padding-bottom: 96px;
 }
 
 .portfolio-card {
@@ -13,24 +13,25 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .portfolio-card__tag {
-  padding: 6px 14px;
+  padding: 5px 12px;
+  font-family: var(--font-mono);
   font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--accent-light);
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.25);
-  border-radius: 100px;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
 }
 
 .portfolio-card__text {
   font-size: 1.0625rem;
   color: var(--text-secondary);
-  line-height: 1.75;
-  margin-bottom: 32px;
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 36px;
 }
 
 .portfolio-card__actions {

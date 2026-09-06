@@ -1,35 +1,34 @@
-/* Global mobile polish */
+/* Global Mobile Polish */
 
 @media (max-width: 768px) {
   :root {
     --header-height: 64px;
-    --section-gap: 72px;
+    --section-gap: 56px;
   }
 
   main {
-    padding-top: calc(var(--header-height) + 16px);
+    padding-top: calc(var(--header-height) + 20px);
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .page-header {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
 
   .page-header__title {
-    font-size: clamp(1.875rem, 8vw, 2.5rem);
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    letter-spacing: -0.04em;
   }
 
   .page-header__desc {
-    font-size: 1rem;
-  }
-
-  .btn {
-    min-height: 44px;
+    font-size: 0.9375rem;
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --section-gap: 56px;
+    --section-gap: 48px;
   }
 
   main {
@@ -39,16 +38,63 @@
   }
 
   .page-header {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   .page-header__desc {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
+  }
+
+  .devlog-entry {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .devlog-timeline {
+    padding-left: 20px;
+  }
+
+  .devlog-entry__marker {
+    left: -20px;
+    width: 9px;
+    height: 9px;
+  }
+
+  .hof-section {
+    padding: 20px 16px;
+  }
+
+  .hof-ege {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-hero {
+    padding: 24px 16px;
+  }
+
+  .showcase-section--muted {
+    padding: 20px 16px;
+  }
+
+  .showcase-flow__step {
+    min-width: 100%;
+    padding: 16px;
+  }
+
+  .showcase-code {
+    padding: 16px;
+  }
+
+  .showcase-code code {
+    font-size: 0.75rem;
   }
 }
 
 /* Touch-friendly defaults */
 @media (hover: none) and (pointer: coarse) {
+  a,
+  button,
   .btn,
   .site-header__link,
   .site-header__cta,
@@ -64,52 +110,5 @@
   .project-card:hover,
   .stat-card:hover {
     transform: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .devlog-entry {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 14px 16px;
-  }
-
-  .devlog-timeline {
-    padding-left: 24px;
-  }
-
-  .devlog-entry__marker {
-    left: -24px;
-    width: 12px;
-    height: 12px;
-  }
-
-  .hof-section {
-    padding: 20px 16px;
-  }
-
-  .hof-ege {
-    grid-template-columns: 1fr;
-  }
-
-  .showcase-hero {
-    padding: 24px 16px 28px;
-  }
-
-  .showcase-section--muted {
-    padding: 16px;
-  }
-
-  .showcase-flow__step {
-    min-width: 100%;
-    padding: 16px;
-  }
-
-  .showcase-code {
-    padding: 14px 16px;
-  }
-
-  .showcase-code code {
-    font-size: 0.6875rem;
   }
 }

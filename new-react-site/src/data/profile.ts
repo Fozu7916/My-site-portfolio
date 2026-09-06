@@ -11,31 +11,30 @@ export const profile = {
 };
 
 export const socialLinks = [
-  { label: 'GitHub', href: profile.github },
-  { label: 'LeetCode', href: profile.leetcode },
+{ label: 'GitHub', href: profile.github },
+{ label: 'LeetCode', href: profile.leetcode },
 ];
 
 export const education = {
-  schools: [
-    '9 класс — МБОУ СШ (базовая)',
-    '11 класс — физико-математическая школа при СФУ',
-    'Вуз - 😉',
-  ],
-  certificate: 'Красный аттестат за 9 класс, без троек за 11',
-  ege: [
-    { subject: 'Русский', score: 75 },
-    { subject: 'Проф. математика', score: 95 },
-    { subject: 'Информатика', score: 80 },
-  ],
+schools: [
+'9th grade — MOU Secondary School (basic)',
+'11th grade — Physics and Mathematics School at SFU',
+'University - Tomsk Polytechnic University'
+],
+ege: [
+{ subject: 'Russian', score: 75 },
+{ subject: 'Professional Mathematics', score: 95 },
+{ subject: 'Computer Science', score: 80 },
+],
 };
 
 export const scienceAchievements = [
-  'Заключительные этапы по математике: ОММО, Изумруд',
-  'Заключительные этапы по информатике: Изумруд, Бельчонок, Газпром, Шаг в будущее, Высшая Проба',
-  '2 место на конференции «Леонардо» (Москва, за счёт СФУ) — член ГИР (фонд одарённых детей)',
-  'Первая публикация в связи с участием в «Енисейской теплофизике»',
+'Final stages in mathematics: OMMO, Emerald',
+'Final stages in computer science: Emerald, Belchonok, Gazprom, Step into the Future, Higher Standard',
+'2nd place at the Leonardo conference (Moscow, sponsored by SFU) — member of the GIR (Gifted Children\'s Fund)',
+'First publication in connection with participation in Yenisei Thermal Physics',
 ];
 
 export const itAchievements = [
-  'Оффер в «Апогей 1С» после хакатона (отсеялось 60% команд)',
+'Offer to Apogey 1C after the hackathon (60% of teams dropped out)',
 ];

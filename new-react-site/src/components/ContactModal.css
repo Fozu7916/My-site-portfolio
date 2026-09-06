@@ -11,8 +11,8 @@
 .contact-modal__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(3, 3, 6, 0.75);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(25px);
   border: none;
   cursor: pointer;
 }
@@ -21,103 +21,102 @@
   position: relative;
   width: 100%;
   max-width: 440px;
-  padding: 36px 32px 32px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-accent);
-  border-radius: var(--radius-xl);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5), var(--shadow-glow);
-  backdrop-filter: blur(20px);
+  padding: 32px;
+  background: #000000;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
 }
 
 .contact-modal__close {
   position: absolute;
   top: 16px;
   right: 16px;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  line-height: 1;
+  font-size: 1.25rem;
   color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all var(--transition);
+  transition: border-color var(--transition), color var(--transition);
 }
 
 .contact-modal__close:hover {
   color: var(--text-primary);
-  border-color: var(--border-accent);
+  border-color: var(--border-hover);
 }
 
 .contact-modal__label {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent-secondary);
-  margin-bottom: 12px;
+  color: var(--accent);
+  margin-bottom: 8px;
 }
 
 .contact-modal__title {
   font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 800;
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  background: none;
+  -webkit-text-fill-color: var(--text-primary);
+  margin-bottom: 8px;
 }
 
 .contact-modal__desc {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 28px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
 }
 
 .contact-modal__primary {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
 .contact-modal__link {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px 18px;
+  gap: 12px;
+  padding: 14px 16px;
   text-decoration: none;
-  border-radius: var(--radius-md);
-  transition: all var(--transition);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition);
 }
 
 .contact-modal__link--primary {
-  background: var(--bg-card);
+  background: transparent;
   border: 1px solid var(--border-subtle);
 }
 
 .contact-modal__link--primary:hover {
-  border-color: var(--border-accent);
-  background: var(--bg-card-hover);
-  transform: translateX(4px);
+  border-color: var(--border-hover);
+  background: transparent;
+  transform: none;
 }
 
 .contact-modal__link-icon {
-  font-size: 1.25rem;
-  width: 40px;
-  height: 40px;
+  font-size: 1.125rem;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(99, 102, 241, 0.12);
-  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
   flex-shrink: 0;
 }
 
@@ -133,8 +132,8 @@
 
 .contact-modal__link-value {
   display: block;
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
   color: var(--text-primary);
 }
 
@@ -142,25 +141,25 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding-top: 20px;
+  padding-top: 16px;
   border-top: 1px solid var(--border-subtle);
 }
 
 .contact-modal__chip {
-  padding: 8px 16px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--text-secondary);
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.04);
+  background: transparent;
   border: 1px solid var(--border-subtle);
-  border-radius: 100px;
-  transition: all var(--transition);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), color var(--transition);
 }
 
 .contact-modal__chip:hover {
-  color: var(--accent-light);
-  border-color: var(--border-accent);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
 }
 
 @media (max-width: 480px) {
@@ -170,23 +169,8 @@
   }
 
   .contact-modal__card {
-    width: 100%;
-    max-width: 100%;
-    padding: 28px 20px calc(24px + env(safe-area-inset-bottom, 0px));
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    padding: 24px 20px calc(24px + env(safe-area-inset-bottom, 0px));
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     border-bottom: none;
-  }
-
-  .contact-modal__primary {
-    gap: 8px;
-  }
-
-  .contact-modal__link {
-    padding: 14px 16px;
-  }
-
-  .contact-modal__link-value {
-    font-size: 0.8125rem;
-    word-break: break-all;
   }
 }
