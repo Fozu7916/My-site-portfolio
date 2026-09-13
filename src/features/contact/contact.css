@@ -1,0 +1,55 @@
+.contact-dialog {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(10,10,15,.92);
+  backdrop-filter: blur(12px);
+}
+
+.contact-dialog__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 620px);
+  padding: clamp(32px, 7vw, 64px);
+  border-radius: var(--radius-card);
+  background: var(--card);
+}
+
+.contact-dialog__panel h2 { margin-bottom: 18px; }
+.contact-dialog__email {
+  margin: 24px 0 0;
+  color: var(--text);
+  font-size: 18px;
+  user-select: all;
+}
+
+.contact-dialog__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.icon-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  color: var(--text);
+  background: var(--interactive);
+  cursor: pointer;
+  font-size: 22px;
+}
+
+@media (max-width: 640px) {
+  .contact-dialog__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
