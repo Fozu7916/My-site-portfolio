@@ -15,7 +15,10 @@
   --gutter: clamp(20px, 5vw, 56px);
   --section: clamp(72px, 10vw, 128px);
   --radius-card: 48px;
+  --radius-inner: 16px;
   --radius-pill: 40px;
+  --title-card: clamp(30px, 3.2vw, 36px);
+  --body-card: 19px;
 }
 
 * { box-sizing: border-box; }

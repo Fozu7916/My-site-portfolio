@@ -14,7 +14,7 @@
   z-index: 1;
   max-width: min(1100px, 100%);
   max-height: 82vh;
-  border-radius: 8px;
+  border-radius: var(--radius-inner);
 }
 
 .lightbox__close {

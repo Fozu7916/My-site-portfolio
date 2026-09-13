@@ -14,11 +14,16 @@
   z-index: 1;
   width: min(100%, 620px);
   padding: clamp(32px, 7vw, 64px);
+  border: 1px solid rgba(226,227,237,.065);
   border-radius: var(--radius-card);
   background: var(--card);
 }
 
-.contact-dialog__panel h2 { margin-bottom: 18px; }
+.contact-dialog__panel h2 {
+  margin-bottom: 18px;
+  font-size: var(--title-card);
+  line-height: 1.22;
+}
 .contact-dialog__email {
   margin: 24px 0 0;
   color: var(--text);

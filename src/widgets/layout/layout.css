@@ -74,9 +74,14 @@
 
 .menu-button {
   display: none;
-  border: 0;
-  background: none;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid rgba(226,227,237,.28);
+  border-radius: var(--radius-pill);
+  color: var(--text);
+  background: rgba(39,39,53,.55);
   cursor: pointer;
+  font-size: 14px;
 }
 
 .site-footer {

@@ -28,7 +28,7 @@ export function SiteHeader() {
   return (
     <header className={`site-header${scrolled ? ' site-header--scrolled' : ''}`}>
       <div className="site-header__inner">
-        <Link to="/" className="brand" aria-label="{profile.name}, home">
+        <Link to="/" className="brand" aria-label={`${profile.name}, home`}>
           <span className="brand__mark" aria-hidden="true"><i /><i /></span>
           <span>Fozu_dev</span>
         </Link>
