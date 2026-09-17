@@ -4,7 +4,7 @@ import { ProjectCard } from '../features/projects/ui/ProjectCard';
 import { PageIntro } from '../shared/ui/PageIntro';
 import { Reveal } from '../shared/ui/Reveal';
 
-const filters: Array<'All' | ProjectCategory> = ['All', '.NET', 'C++', 'Python'];
+const filters: Array<'All' | ProjectCategory> = ['All', '.NET', 'Frontend', 'Python'];
 const previewImages = projects.flatMap((project) => project.images.slice(0, 1)).slice(0, 3);
 
 export function ProjectsPage() {

@@ -19,7 +19,6 @@ export const education = {
   schools: [
     'Software Engineering — Tomsk Polytechnic University',
     'Physics and Mathematics School at Siberian Federal University',
-    'Honors certificate after Grade 9',
   ],
   exams: [
     { subject: 'Mathematics', score: 95 },
