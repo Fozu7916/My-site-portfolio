@@ -124,7 +124,7 @@ export const projects: Project[] = [
       { value: 'Automated', label: 'Data Collection' },
     ],
     github: 'https://github.com/Fozu7916/HacatonProTechno',
-    images: [],
+    images: ['/images/HacatonFirst.jpg', '/images/HacatonSecond.jpg', '/images/HacatonThird.jpg', '/images/HacatonFourth.jpg', '/images/HacatonFifth.jpg'],
     featured: true,
     status: 'Hackathon product',
   },
