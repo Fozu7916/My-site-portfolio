@@ -17,8 +17,8 @@ export const skills = [
 
 export const education = {
   schools: [
-    'Software Engineering — Tomsk Polytechnic University',
-    'Physics and Mathematics School at Siberian Federal University',
+    '13`th university in Russia: Software Engineering — Tomsk Polytechnic University, ',
+    '24`th school in Russia: Physics and Mathematics School at Siberian Federal University'
   ],
   exams: [
     { subject: 'Mathematics', score: 95 },
@@ -29,19 +29,21 @@ export const education = {
 
 export const achievements = {
   science: [
-    'Mathematics olympiad finalist: OMMO and Izumrud',
-    'Computer science olympiad finalist: Izumrud, Belchonok, Gazprom, Step into the Future, Vysshaya Proba and Rosatom',
-    'Second place at the Leonardo conference in Moscow and inclusion in Russia’s State Information Resource for gifted children',
-    'First scientific publication through Yenisei Thermal Physics and participation in multiple research conferences',
+    'Partipiant in final stage of 5 mathematics olympiads',
+    'Partipiant in final stage of 10+ computer science olympiads',
+    'Delivered over 30 presentations at scientific conferences; won 2nd place at the "Leonardo" All-Russian scientific conference.'
   ],
-  engineering: ['Received an offer from Apogey 1C following a hackathon in which 60% of teams were eliminated'],
+  engineering: [
+    'Received an offer from Apogey 1C following a hackathon in which 60% of teams were eliminated',
+    'Partipiant in 7 hackathons',
+  ],
 } as const;
 
 export const powerlifting = {
   bodyweight: 82,
   total: 400,
   lifts: [
-    { name: 'Bench press', weight: 115 },
+    { name: 'Bench', weight: 115 },
     { name: 'Squat', weight: 135 },
     { name: 'Deadlift', weight: 150 },
   ],

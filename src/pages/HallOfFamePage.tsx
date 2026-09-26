@@ -35,14 +35,19 @@ export function HallOfFamePage() {
         <Reveal className="content-card">
           <span className="eyebrow">Engineering</span>
           <h2>Offer earned through delivery.</h2>
-          <p className="result-quote">{achievements.engineering[0]}</p>
+
+          <ul className="clean-list">
+            {achievements.engineering.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </Reveal>
         <Reveal className="content-card">
           <span className="eyebrow">Powerlifting</span>
           <h2>{powerlifting.total} kg total at {powerlifting.bodyweight} kg bodyweight.</h2>
           <div className="score-grid">
             {powerlifting.lifts.map((lift) => (
-              <div key={lift.name}><strong>{lift.weight} kg</strong><span>{lift.name}</span></div>
+              <div key={lift.name}><strong>{lift.weight}</strong><span>{lift.name}</span></div>
             ))}
           </div>
           <p>Training personal bests rather than competition results.</p>
