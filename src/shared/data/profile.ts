@@ -10,10 +10,47 @@ export const profile = {
 } as const;
 
 export const skills = [
-  { category: 'Backend (.NET) — core stack', items: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'PostgreSQL', 'MySQL', 'Docker', 'REST API', 'Clean Architecture'] },
-  { category: 'Frontend', items: ['React', 'TypeScript', 'Framer Motion'] },
-  { category: 'Tools and other technologies', items: ['C++ (Qt, MVC, libmpv)','C++ (competitions)','C','Java','Python (Automation)', 'Linux', 'Git', 'Kafka', 'Docker', 'Jira'] },
-] as const;
+  {
+    category: 'Backend — primary',
+    items: [
+      'C#',
+      'ASP.NET Core',
+      'Entity Framework Core',
+      'PostgreSQL',
+      'MySQL',
+      'REST API',
+      'Docker',
+    ],
+  },
+  {
+    category: 'Backend — secondary',
+    items: [
+      'Java',
+      'Spring Boot',
+    ],
+  },
+  {
+    category: 'Engineering',
+    items: [
+      'Linux',
+      'Git',
+      'Kafka',
+      'Clean Architecture',
+      'Testing',
+      'CI/CD',
+    ],
+  },
+  {
+    category: 'Additional',
+    items: [
+      'C++',
+      'C',
+      'Python',
+      'React',
+      'TypeScript',
+    ],
+  },
+];
 
 export const education = {
   schools: [
