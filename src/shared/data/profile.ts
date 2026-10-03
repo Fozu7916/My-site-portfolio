@@ -43,11 +43,8 @@ export const skills = [
   {
     category: 'Additional',
     items: [
-      'C++',
-      'C',
       'Python',
-      'React',
-      'TypeScript',
+      'React + Tailwind + Typescript',
     ],
   },
 ];
