@@ -40,7 +40,7 @@ export function ContactProvider({ children }: PropsWithChildren) {
             <button ref={closeButtonRef} type="button" className="icon-button" onClick={close} aria-label="Close contact dialog">×</button>
             <span className="eyebrow">Start a conversation</span>
             <h2 id="contact-title">Let’s build something reliable.</h2>
-            <p>I am open to .NET opportunities and engineering conversations.</p>
+            <p>I am open to backend engineering roles and technical conversations.</p>
             <p className="contact-dialog__email">{profile.email}</p>
             <div className="contact-dialog__actions">
               <a className="button button--ghost" href={profile.telegramUrl} target="_blank" rel="noreferrer">Telegram</a>
