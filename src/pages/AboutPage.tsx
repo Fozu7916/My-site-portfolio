@@ -75,33 +75,29 @@ export function AboutPage() {
             <div className="about-copy">
               <p>
                 <strong>Engineering depth</strong>
-                I focus on explicit contracts, data integrity and systems that
-                remain understandable as requirements evolve.
+                I focus on Domain-Driven Design, strict data integrity, and building resilient systems using .NET and Java ecosystems.
               </p>
 
               <p>
-                <strong>Product context</strong>
-                I consider how backend decisions affect reliability,
-                maintainability and the overall product experience.
+                <strong>Architecture & Scale</strong>
+                I design backend architectures that handle real-time communications (WebSockets), caching, and optimized database queries.
               </p>
 
               <p>
                 <strong>Continuous growth</strong>
-                My primary direction is .NET backend development, while I am
-                also building experience with Java and the broader backend
-                ecosystem.
+                My primary focus is building scalable backend systems. I am currently studying at a top-15 Russian technical university while solving real-world engineering problems.
               </p>
             </div>
 
             <div className="about-metrics">
               <div>
-                <strong>.NET</strong>
-                <span>Primary backend direction</span>
+                <strong>.NET & Java</strong>
+                <span>Core ecosystems</span>
               </div>
 
               <div>
-                <strong>Java</strong>
-                <span>Secondary backend ecosystem</span>
+                <strong>Backend</strong>
+                <span>Primary focus</span>
               </div>
 
               <div>

@@ -2,13 +2,36 @@ import { PageIntro } from '../shared/ui/PageIntro';
 import { Reveal } from '../shared/ui/Reveal';
 
 const entries = [
-  { date: 'Sep 2026', title: 'Rebrand', text: 'Restyled the portfolio from Neo-brutalism to Mercury: introduced the Mercury design system, unified interfaces, and improved the visual hierarchy.' },
-  { date: 'Sep 2026', title: 'Complete Codebase Rewrite', text: 'Rewrote the entire codebase from scratch: migrated to Vite, rebuilt all core entities and project data structures, and rearchitected the app for modularity, reusability, and future requirements. Paid special attention to regression-proofing and making components truly composable.' },
-  { date: 'Jul 2025', title: '.NET focus', text: 'Repositioned the profile around backend engineering and reworked the project narrative.' },
-  { date: 'Jun 2025', title: 'AlekseyBook', text: 'Documented the ASP.NET Core and React social network case study.' },
-  { date: 'May 2025', title: 'Delivery foundations', text: 'Configured CI/CD workflows and containerized project environments.' },
-  { date: 'Jan 2025', title: 'React portfolio', text: 'Started the typed React version and its first responsive design system.' },
-  { date: 'Apr 2024', title: 'First native app', text: 'Built the first C++ desktop application with Qt.' },
+  { 
+    date: 'Sep 2026', 
+    title: 'Platform Modernization', 
+    text: 'Migrated the portfolio codebase to Vite and completely rearchitected the React layer for modularity. Unified the design system while maintaining strict separation of concerns.' 
+  },
+  { 
+    date: 'Jul 2025', 
+    title: 'Backend Specialization', 
+    text: 'Shifted core engineering focus entirely to backend architectures. Deepened expertise in relational databases, API design, and domain-driven principles.' 
+  },
+  { 
+    date: 'Jun 2025', 
+    title: 'AlekseyBook MVP', 
+    text: 'Architected and deployed a full-stack social network. Solved real-time state synchronization using SignalR and designed a modular backend architecture using ASP.NET Core.' 
+  },
+  { 
+    date: 'May 2025', 
+    title: 'Delivery Foundations', 
+    text: 'Configured CI/CD workflows and containerized project environments using Docker to ensure reproducible builds.' 
+  },
+  { 
+    date: 'Jan 2025', 
+    title: 'Independent Frontend', 
+    text: 'Built the first iteration of a typed React client, establishing the ability to independently deliver full-stack pet projects.' 
+  },
+  { 
+    date: 'Apr 2024', 
+    title: 'Computer Science Foundations', 
+    text: 'Began deep-dive into core computer science concepts, object-oriented programming, and fundamental data structures.' 
+  },
 ];
 
 export function DevlogPage() {

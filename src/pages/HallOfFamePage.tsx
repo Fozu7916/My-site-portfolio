@@ -53,21 +53,7 @@ export function HallOfFamePage() {
           <p>Training personal bests rather than competition results.</p>
         </Reveal>
       </div>
-      <section className="certificate-section">
-        <div className="section-heading"><div><span className="eyebrow">Certificates</span><h2>Continuous practice.</h2></div></div>
-        <div className="certificate-grid">
-          {certificates.map((certificate) => (
-            <Reveal className="certificate-card" key={certificate.title}>
-              <button type="button" onClick={() => setSelectedImage(certificate.image)}>
-                <img src={certificate.image} alt={certificate.title} />
-              </button>
-              <h3>{certificate.title}</h3>
-              <span>Open certificate ↗</span>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-      <ImageLightbox src={selectedImage} alt="Professional certificate" onClose={() => setSelectedImage(null)} />
+
     </div>
   );
 }

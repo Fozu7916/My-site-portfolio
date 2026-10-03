@@ -5,9 +5,21 @@ import { useContact } from '../features/contact/ContactProvider';
 import { Reveal } from '../shared/ui/Reveal';
 
 const principles = [
-  { number: '01', title: 'Fundamentals first', text: 'Strong models, explicit contracts and engineering decisions grounded in first principles.' },
-  { number: '02', title: 'Backend depth, product context', text: 'C# and .NET as the core, with enough frontend experience to understand the complete user journey.' },
-  { number: '03', title: 'Consistency compounds', text: 'The same discipline drives software delivery, continuous learning and powerlifting.' },
+  { 
+    number: '01', 
+    title: 'Fundamentals first', 
+    text: 'Strong models, explicit contracts, and engineering decisions grounded in first principles and Domain-Driven Design.' 
+  },
+  { 
+    number: '02', 
+    title: 'Ecosystem depth', 
+    text: 'Building scalable and resilient backend architectures using both .NET and Java ecosystems, with a heavy focus on relational databases.' 
+  },
+  { 
+    number: '03', 
+    title: 'Consistency compounds', 
+    text: 'The same discipline drives software delivery, continuous system optimization, and powerlifting.' 
+  },
 ];
 
 export function HomePage() {
@@ -19,7 +31,10 @@ export function HomePage() {
         <div className="home-hero__backdrop" />
         <div className="home-hero__content">
           <h1>Reliable systems.<br />Quiet confidence.</h1>
-          <p>I’m a C#/.NET backend developer and Software Engineering student at TPU. I build APIs and data-driven services, using React and TypeScript when the product needs a frontend.</p>
+          <p>
+            I’m a Backend Software Engineer and a student at a top-15 Russian technical university. 
+            I build scalable APIs, real-time communications, and data-driven services using .NET and Java.
+          </p>
           <div className="hero-actions">
             <button className="button button--primary" type="button" onClick={openContact}>Start a conversation</button>
             <Link className="button button--ghost" to="/projects">View selected work</Link>

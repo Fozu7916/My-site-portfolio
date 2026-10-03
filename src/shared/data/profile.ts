@@ -1,6 +1,6 @@
 export const profile = {
-  name: 'Shikin Aleksey',
-  role: '.NET Backend Developer',
+  name: 'Aleksey Shikin', 
+  role: 'Backend Software Engineer',
   email: 'alekseylis2111@gmail.com',
   telegram: '@FozuZXC',
   telegramUrl: 'https://t.me/FozuZXC',
@@ -11,65 +11,61 @@ export const profile = {
 
 export const skills = [
   {
-    category: 'Backend — primary',
+    category: 'Languages & Frameworks',
     items: [
-      'C#',
-      'ASP.NET Core',
-      'Entity Framework Core',
+      'C# (.NET 8, ASP.NET Core)',
+      'Java (Spring Boot)',
+    ],
+  },
+  {
+    category: 'Databases & Messaging',
+    items: [
       'PostgreSQL',
-      'MySQL',
-      'REST API',
-      'Docker',
+      'Entity Framework Core',
+      'Kafka',
+      'Redis',
     ],
   },
   {
-    category: 'Backend — secondary',
+    category: 'Architecture & Infrastructure',
     items: [
-      'Java',
-      'Spring Boot',
-    ],
-  },
-  {
-    category: 'Engineering',
-    items: [
+      'REST API & WebSockets (SignalR)',
+      'Docker & CI/CD',
       'Linux',
       'Git',
-      'Kafka',
-      'Clean Architecture',
-      'Testing',
-      'CI/CD',
     ],
   },
   {
-    category: 'Additional',
+    category: 'Concepts & Additional',
     items: [
-      'Python',
-      'React + Tailwind + Typescript',
+      'Clean Architecture / DDD',
+      'Unit & Integration Testing',
+      'React + TypeScript (UI)',
     ],
   },
 ];
 
 export const education = {
   schools: [
-    '13`th university in Russia: Software Engineering — Tomsk Polytechnic University, ',
-    '24`th school in Russia: Physics and Mathematics School at Siberian Federal University'
+    'Software Engineering — Tomsk Polytechnic University (Top 15 Technical Universities in Russia)',
+    'Physics and Mathematics School at Siberian Federal University (Top 25 in Russia)'
   ],
   exams: [
-    { subject: 'Mathematics', score: 95 },
-    { subject: 'Computer Science', score: 80 },
-    { subject: 'Russian', score: 75 },
+    { subject: 'Mathematics (USE)', score: 95 },
+    { subject: 'Computer Science (USE)', score: 80 },
+    { subject: 'Russian (USE)', score: 75 },
   ],
 } as const;
 
 export const achievements = {
   science: [
-    'Partipiant in final stage of 5 mathematics olympiads',
-    'Partipiant in final stage of 10+ computer science olympiads',
-    'Delivered over 30 presentations at scientific conferences; won 2nd place at the "Leonardo" All-Russian scientific conference.'
+    'Finalist in 5 national mathematics olympiads',
+    'Finalist in 10+ national computer science olympiads',
+    'Delivered 30+ presentations at scientific conferences; 2nd place at the "Leonardo" All-Russian scientific conference'
   ],
   engineering: [
-    'Received an offer from Apogey 1C following a hackathon in which 60% of teams were eliminated',
-    'Partipiant in 7 hackathons',
+    'Secured a job offer from Apogey 1C after placing in a highly competitive hackathon',
+    'Participant in 7 hackathons',
   ],
 } as const;
 
