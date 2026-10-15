@@ -1,6 +1,6 @@
 export const profile = {
-  name: 'Aleksey Shikin', 
-  role: 'Backend Software Engineer',
+  name: 'Aleksey Shikin',
+  role: 'Backend Developer · C# / .NET',
   email: 'alekseylis2111@gmail.com',
   telegram: '@FozuZXC',
   telegramUrl: 'https://t.me/FozuZXC',
@@ -11,44 +11,35 @@ export const profile = {
 
 export const skills = [
   {
-    category: 'Languages & Frameworks',
+    category: 'Backend',
+    items: ['C#', '.NET 10', 'ASP.NET Core', 'Go', 'Entity Framework Core'],
+  },
+  {
+    category: 'Databases',
+    items: ['PostgreSQL', 'MongoDB', 'Redis'],
+  },
+  {
+    category: 'Message Brokers',
+    items: ['RabbitMQ', 'Apache Kafka'],
+  },
+  {
+    category: 'DevOps & Cloud',
     items: [
-      'C# (.NET 8, ASP.NET Core)',
-      'Java (Spring Boot)',
+      'Git', 'GitHub', 'GitHub Actions',
+      'Linux', 'Docker', 'Kubernetes', 'Nginx',
+      'AWS', 'Microsoft Azure',
     ],
   },
   {
-    category: 'Databases & Messaging',
-    items: [
-      'PostgreSQL',
-      'Entity Framework Core',
-      'Kafka',
-      'Redis',
-    ],
+    category: 'Frontend',
+    items: ['TypeScript', 'React'],
   },
-  {
-    category: 'Architecture & Infrastructure',
-    items: [
-      'REST API & WebSockets (SignalR)',
-      'Docker & CI/CD',
-      'Linux',
-      'Git',
-    ],
-  },
-  {
-    category: 'Concepts & Additional',
-    items: [
-      'Clean Architecture / DDD',
-      'Unit & Integration Testing',
-      'React + TypeScript (UI)',
-    ],
-  },
-];
+] as const;
 
 export const education = {
   schools: [
-    'Software Engineering — Tomsk Polytechnic University (Top 15 Technical Universities in Russia)',
-    'Physics and Mathematics School at Siberian Federal University (Top 25 in Russia)'
+    'Software Engineering — Tomsk Polytechnic University',
+    'Physics and Mathematics School — Siberian Federal University',
   ],
   exams: [
     { subject: 'Mathematics (USE)', score: 95 },
@@ -61,11 +52,12 @@ export const achievements = {
   science: [
     'Finalist in 5 national mathematics olympiads',
     'Finalist in 10+ national computer science olympiads',
-    'Delivered 30+ presentations at scientific conferences; 2nd place at the "Leonardo" All-Russian scientific conference'
+    'Delivered 30+ presentations at scientific conferences',
+    'Won 2nd place at the Leonardo All-Russian Scientific Conference',
   ],
   engineering: [
-    'Secured a job offer from Apogey 1C after placing in a highly competitive hackathon',
-    'Participant in 7 hackathons',
+    'Received a job offer from Apogey 1C after a competitive hackathon',
+    'Participated in 7 hackathons',
   ],
 } as const;
 
@@ -73,7 +65,7 @@ export const powerlifting = {
   bodyweight: 82,
   total: 400,
   lifts: [
-    { name: 'Bench', weight: 115 },
+    { name: 'Bench Press', weight: 115 },
     { name: 'Squat', weight: 135 },
     { name: 'Deadlift', weight: 150 },
   ],

@@ -1,3 +1,4 @@
+
 import { profile, skills } from '../shared/data/profile';
 
 import { PageIntro } from '../shared/ui/PageIntro';
@@ -8,7 +9,7 @@ export function AboutPage() {
     <div className="page-shell about-page">
       <PageIntro
         title="Engineering with a wider perspective."
-        description="Technical depth, product awareness and disciplined practice shape how I approach complex backend systems."
+        description="I build reliable backend systems with C# and .NET, focusing on API design, data integrity, real-time communication, and maintainable architecture."
       />
 
       <section className="about-grid">
@@ -74,30 +75,39 @@ export function AboutPage() {
 
             <div className="about-copy">
               <p>
-                <strong>Engineering depth</strong>
-                I focus on Domain-Driven Design, strict data integrity, and building resilient systems using .NET and Java ecosystems.
+                <strong>Engineering fundamentals</strong>
+                I focus on building maintainable backend applications with
+                C# and ASP.NET Core, emphasizing clean code, data integrity,
+                and reliable API design.
               </p>
 
               <p>
-                <strong>Architecture & Scale</strong>
-                I design backend architectures that handle real-time communications (WebSockets), caching, and optimized database queries.
+                <strong>Backend architecture</strong>
+                I work with REST APIs, real-time communication using
+                SignalR, PostgreSQL, and Redis. My current project explores
+                idempotent message delivery and server-side synchronization
+                for an offline-first messenger.
               </p>
 
               <p>
                 <strong>Continuous growth</strong>
-                My primary focus is building scalable backend systems. I am currently studying at a top-15 Russian technical university while solving real-world engineering problems.
+                I study Software Engineering at Tomsk Polytechnic University
+                and develop practical projects to strengthen my engineering
+                skills. My next learning goal is Go, with a focus on
+                concurrency, network programming, and scalable backend
+                services.
               </p>
             </div>
 
             <div className="about-metrics">
               <div>
-                <strong>.NET & Java</strong>
-                <span>Core ecosystems</span>
+                <strong>C# / .NET</strong>
+                <span>Primary stack</span>
               </div>
 
               <div>
                 <strong>Backend</strong>
-                <span>Primary focus</span>
+                <span>Engineering focus</span>
               </div>
 
               <div>
