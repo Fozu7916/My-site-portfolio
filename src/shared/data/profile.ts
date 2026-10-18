@@ -12,7 +12,7 @@ export const profile = {
 export const skills = [
   {
     category: 'Backend',
-    items: ['C#', '.NET 10', 'ASP.NET Core', 'Go', 'Entity Framework Core'],
+    items: ['C#', '.NET 10', 'ASP.NET Core', 'Entity Framework Core', 'Go(learning)'],
   },
   {
     category: 'Databases',
@@ -20,14 +20,14 @@ export const skills = [
   },
   {
     category: 'Message Brokers',
-    items: ['RabbitMQ', 'Apache Kafka'],
+    items: ['RabbitMQ(learning)', 'Apache Kafka(learning)'],
   },
   {
     category: 'DevOps & Cloud',
     items: [
       'Git', 'GitHub', 'GitHub Actions',
-      'Linux', 'Docker', 'Kubernetes', 'Nginx',
-      'AWS', 'Microsoft Azure',
+      'Linux', 'Docker', 'Kubernetes(learning)', 'Nginx',
+      'AWS(learning)', 'Microsoft Azure(learning)',
     ],
   },
   {

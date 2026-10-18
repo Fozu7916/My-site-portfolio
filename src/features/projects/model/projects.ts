@@ -152,57 +152,6 @@ export const projects: Project[] = [
   },
 
   {
-    slug: 'it-career-test',
-    title: 'IT Career Test',
-    summary:
-      'Interactive IT career guidance service analyzing 14 development areas using an algorithmic scoring system.',
-    headline: 'Where to go in IT? Transparent scoring for 14 areas.',
-    description:
-      'A client-side Single Page Application assessing hard and soft skills to determine the best fit among 14 IT specializations, from Backend to GameDev.',
-    narrative:
-      'Built as a lead magnet under the Build in Public concept. It moves away from abstract labels and uses a weighted scoring math model, delivering results in a transparent data table with instant UI response.',
-    category: 'Frontend',
-    technologies: [
-      'React',
-      'TypeScript',
-      'Vite',
-      'Netlify',
-    ],
-    features: [
-      '15-question Quick Test for top 3 areas',
-      '50-question Full Test for deep analysis',
-      'Transparent weighted scoring math',
-      'Instant SPA navigation without backend delays',
-    ],
-    layers: [
-      {
-        title: 'Core',
-        text: 'Component-based architecture powered by React and TypeScript.',
-      },
-      {
-        title: 'Logic',
-        text: 'Clean state management and transparent calculation logic for scoring.',
-      },
-      {
-        title: 'Delivery',
-        text: 'Optimized build process via Vite and global distribution on Netlify.',
-      },
-    ],
-    metrics: [
-      { value: '14', label: 'IT Areas Analyzed' },
-      { value: '50', label: 'Deep Questions' },
-      { value: 'SPA', label: 'Zero Backend Delay' },
-    ],
-    github: 'https://github.com/Fozu7916/it-test',
-    images: [
-      '/images/TestFirst.png',
-      '/images/TestSecond.png',
-      '/images/TestThird.png',
-    ],
-    featured: true,
-  },
-
-  {
     slug: 'hacaton-pro-techno',
     title: 'HacatonProTechno',
     summary:
