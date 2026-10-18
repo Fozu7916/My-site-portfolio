@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Aleksey Shikin',
   role: 'Backend Developer · C# / .NET',
-  email: 'alekseylis2111@gmail.com',
+  email: '',
   telegram: '@FozuZXC',
   telegramUrl: 'https://t.me/FozuZXC',
   github: 'https://github.com/Fozu7916',
@@ -12,7 +12,7 @@ export const profile = {
 export const skills = [
   {
     category: 'Backend',
-    items: ['C#', '.NET 10', 'ASP.NET Core', 'Entity Framework Core', 'Go(learning)'],
+    items: ['C#', '.NET 10', 'ASP.NET Core', 'Entity Framework Core', 'Go (learning)'],
   },
   {
     category: 'Databases',
@@ -20,14 +20,14 @@ export const skills = [
   },
   {
     category: 'Message Brokers',
-    items: ['RabbitMQ(learning)', 'Apache Kafka(learning)'],
+    items: ['RabbitMQ (learning)', 'Apache Kafka (learning)'],
   },
   {
     category: 'DevOps & Cloud',
     items: [
       'Git', 'GitHub', 'GitHub Actions',
-      'Linux', 'Docker', 'Kubernetes(learning)', 'Nginx',
-      'AWS(learning)', 'Microsoft Azure(learning)',
+      'Linux', 'Docker', 'Kubernetes (learning)', 'Nginx',
+      'AWS (learning)', 'Microsoft Azure (learning)',
     ],
   },
   {
@@ -46,18 +46,18 @@ export const education = {
     { subject: 'Computer Science (USE)', score: 80 },
     { subject: 'Russian (USE)', score: 75 },
   ],
+  english: [
+  ],
 } as const;
 
 export const achievements = {
   science: [
-    'Finalist in 5 national mathematics olympiads',
-    'Finalist in 10+ national computer science olympiads',
+    'Finalist in 5 mathematics olympiads',
+    'Finalist in 10+ computer science olympiads',
     'Delivered 30+ presentations at scientific conferences',
-    'Won 2nd place at the Leonardo All-Russian Scientific Conference',
   ],
   engineering: [
-    'Received a job offer from Apogey 1C after a competitive hackathon',
-    'Participated in 7 hackathons',
+    'Finalist of 5+ hackathons',
   ],
 } as const;
 

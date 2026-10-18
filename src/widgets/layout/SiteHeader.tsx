@@ -8,7 +8,7 @@ const navigation = [
   { to: '/projects', label: 'Projects' },
   { to: '/about', label: 'About' },
   { to: '/devlog', label: 'Devlog' },
-  { to: '/hall-of-fame', label: 'Hall of Fame' },
+  { to: '/hall-of-fame', label: 'Achievements' },
 ] as const;
 
 export function SiteHeader() {

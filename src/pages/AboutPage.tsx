@@ -83,19 +83,16 @@ export function AboutPage() {
 
               <p>
                 <strong>Backend architecture</strong>
-                I work with REST APIs, real-time communication using
-                SignalR, PostgreSQL, and Redis. My current project explores
-                idempotent message delivery and server-side synchronization
-                for an offline-first messenger.
+                I work with REST APIs, implement real-time communication using SignalR, 
+                and utilize PostgreSQL and Redis. I design system architectures and develop 
+                high-performance functions—as demonstrated in my projects.
               </p>
 
               <p>
                 <strong>Continuous growth</strong>
-                I study Software Engineering at Tomsk Polytechnic University
-                and develop practical projects to strengthen my engineering
-                skills. My next learning goal is Go, with a focus on
-                concurrency, network programming, and scalable backend
-                services.
+                I am studying Software Engineering at Tomsk Polytechnic University
+                and working on practical projects to refine my engineering skills. 
+                My next goal is to secure an internship at T-Bank.
               </p>
             </div>
 
@@ -111,11 +108,6 @@ export function AboutPage() {
               </div>
 
               <div>
-                <strong>400 kg</strong>
-                <span>Powerlifting total</span>
-              </div>
-
-              <div>
                 <strong>B2</strong>
                 <span>English level</span>
               </div>
@@ -123,8 +115,7 @@ export function AboutPage() {
           </Reveal>
 
           <Reveal className="content-card stack-card">
-            <span className="eyebrow">Technologies</span>
-            <h2>Stack.</h2>
+            <h2>Stack</h2>
 
             <div className="skill-groups">
               {skills.map((group) => (
