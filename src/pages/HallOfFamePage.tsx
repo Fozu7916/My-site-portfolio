@@ -128,9 +128,7 @@ export function HallOfFamePage() {
             {detailedAchievements.science.map((item) => (
               <li key={item.name}>
                 <strong>{item.name}</strong>
-                {item.result && (
-                  <span className="achievement-result">{item.result}</span>
-                )}
+
                 {'note' in item && <p>{item.note}</p>}
               </li>
             ))}
