@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
-import { profile } from '../../shared/data/profile';
+import { profile, socialLinks } from '../../shared/data/profile';
 
 export function SiteFooter() {
+  const footerLinks = socialLinks.filter((link) => link.showIn.includes('footer'));
+
   return (
     <footer className="site-footer">
       <div className="site-footer__inner">
@@ -14,10 +16,11 @@ export function SiteFooter() {
         </div>
         <div className="site-footer__links">
           <span className="site-footer__email">{profile.email}</span>
-          <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
-          <a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode</a>
-          <a href={profile.telegramUrl} target="_blank" rel="noreferrer">Telegram (DM)</a>
-          <a href={profile.telegramChannelUrl} target="_blank" rel="noreferrer">Telegram Channel</a>
+          {footerLinks.map((link) => (
+            <a key={link.id} href={link.href} target="_blank" rel="noreferrer">
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
       <div className="site-footer__legal">

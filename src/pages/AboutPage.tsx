@@ -1,10 +1,11 @@
-
-import { profile, skills } from '../shared/data/profile';
+import { profile, skills, socialLinks } from '../shared/data/profile';
 
 import { PageIntro } from '../shared/ui/PageIntro';
 import { Reveal } from '../shared/ui/Reveal';
 
 export function AboutPage() {
+  const aboutLinks = socialLinks.filter((link) => link.showIn.includes('about'));
+
   return (
     <div className="page-shell about-page">
       <PageIntro
@@ -15,10 +16,7 @@ export function AboutPage() {
       <section className="about-grid">
         <Reveal className="profile-card">
           <div className="profile-card__portrait">
-            <img
-              src={profile.avatar}
-              alt={`Avatar of ${profile.name}`}
-            />
+            <img src={profile.avatar} alt={`Avatar of ${profile.name}`} />
 
             <small>
               Backend
@@ -38,41 +36,17 @@ export function AboutPage() {
             className="profile-socials"
             aria-label="Contact and coding profiles"
           >
-          <a
-            className="profile-social profile-social--telegram"
-            href={profile.telegramUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Telegram (DM) <span aria-hidden="true">↗</span>
-          </a>
-
-          <a
-            className="profile-social profile-social--telegram"
-            href={profile.telegramChannelUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Telegram channel <span aria-hidden="true">↗</span>
-          </a>
-
-            <a
-              className="profile-social profile-social--github"
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub <span aria-hidden="true">↗</span>
-            </a>
-
-            <a
-              className="profile-social profile-social--leetcode"
-              href={profile.leetcode}
-              target="_blank"
-              rel="noreferrer"
-            >
-              LeetCode <span aria-hidden="true">↗</span>
-            </a>
+            {aboutLinks.map((link) => (
+              <a
+                key={link.id}
+                className={`profile-social profile-social--${link.id}`}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.label} <span aria-hidden="true">↗</span>
+              </a>
+            ))}
           </div>
         </Reveal>
 
@@ -92,15 +66,15 @@ export function AboutPage() {
 
               <p>
                 <strong>Backend architecture</strong>
-                I work with REST APIs, implement real-time communication using SignalR, 
-                and utilize PostgreSQL and Redis. I design system architectures and develop 
+                I work with REST APIs, implement real-time communication using SignalR,
+                and utilize PostgreSQL and Redis. I design system architectures and develop
                 high-performance functions—as demonstrated in my projects.
               </p>
 
               <p>
                 <strong>Continuous growth</strong>
                 I am studying Software Engineering at Tomsk Polytechnic University
-                and working on practical projects to refine my engineering skills. 
+                and working on practical projects to refine my engineering skills.
                 My next goal is to secure an internship at T-Bank.
               </p>
             </div>

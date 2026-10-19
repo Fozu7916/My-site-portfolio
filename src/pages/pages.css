@@ -1009,3 +1009,9 @@
     gap: 1.5rem;
   }
 }
+
+.profile-social--channel { --social-color: #5ec3f0; }
+.profile-social--tiktok {
+  --social-color: #fe2c55;
+  box-shadow: inset 3px 0 #25f4ee, inset 6px 0 #fe2c55;
+}
