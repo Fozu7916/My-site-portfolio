@@ -16,7 +16,8 @@ export function SiteFooter() {
           <span className="site-footer__email">{profile.email}</span>
           <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
           <a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode</a>
-          <a href={profile.telegramUrl} target="_blank" rel="noreferrer">Telegram</a>
+          <a href={profile.telegramUrl} target="_blank" rel="noreferrer">Telegram (DM)</a>
+          <a href={profile.telegramChannelUrl} target="_blank" rel="noreferrer">Telegram Channel</a>
         </div>
       </div>
       <div className="site-footer__legal">

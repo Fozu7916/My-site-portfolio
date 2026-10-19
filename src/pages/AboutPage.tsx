@@ -38,14 +38,23 @@ export function AboutPage() {
             className="profile-socials"
             aria-label="Contact and coding profiles"
           >
-            <a
-              className="profile-social profile-social--telegram"
-              href={profile.telegramUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Telegram <span aria-hidden="true">↗</span>
-            </a>
+          <a
+            className="profile-social profile-social--telegram"
+            href={profile.telegramUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Telegram (DM) <span aria-hidden="true">↗</span>
+          </a>
+
+          <a
+            className="profile-social profile-social--telegram"
+            href={profile.telegramChannelUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Telegram channel <span aria-hidden="true">↗</span>
+          </a>
 
             <a
               className="profile-social profile-social--github"

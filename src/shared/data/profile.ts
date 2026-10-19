@@ -4,6 +4,7 @@ export const profile = {
   email: '',
   telegram: '@FozuZXC',
   telegramUrl: 'https://t.me/FozuZXC',
+  telegramChannelUrl: 'https://t.me/+MAwXHuFGbMU4ZjAy',
   github: 'https://github.com/Fozu7916',
   leetcode: 'https://leetcode.com/u/Fozuzzzxxxccc/',
   avatar: '/images/avatar.jpg',
