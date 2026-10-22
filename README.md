@@ -2,7 +2,7 @@
 
 Personal engineering portfolio for a .NET backend developer. The interface follows a restrained dark design system and presents every project through one typed, data-driven case-study template.
 
-Live site: [fozu-portfolio.netlify.app](https://fozu-portfolio.netlify.app)
+Live site: [https://fozu-dev.site/](https://fozu-dev.site/)
 
 ## Stack
 
