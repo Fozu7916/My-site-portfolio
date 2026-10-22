@@ -20,7 +20,7 @@ const legacyRoutes: Record<string, string> = {
 
 export function App() {
   return (
-    <BrowserRouter basename="/My-site-portfolio">
+    <BrowserRouter>
       <ContactProvider>
         <Routes>
           <Route element={<AppLayout />}>
