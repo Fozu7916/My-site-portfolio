@@ -30,6 +30,76 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'messenger-backend',
+    title: 'Messenger Backend',
+    summary:
+      'Real-time web messenger backend: REST API and SignalR hub with idempotent delivery, ULID-ordered history, and offline delta sync.',
+    headline: 'Messages that arrive once, in order, even on a flaky network.',
+    description:
+      'A team-built .NET 10 backend for a private web messenger: JWT auth, personal dialogs, WSS message delivery through SignalR, time-sortable ULID keys in PostgreSQL, and a Redis backplane for horizontal scaling. Deployed with a CI/CD pipeline on Render and Neon.',
+    narrative:
+      'Built as the backend part of a four-person MVP with a React + RxDB offline-first client. Every message carries a client-side key, so retries after a dropped connection never create duplicates. History and delta sync are served by ULID cursors (after / before), and access to a dialog is checked on every read and write. Foreign dialogs return 404 rather than 403 so their existence is not revealed.',
+    category: '.NET',
+    technologies: [
+      '.NET 10',
+      'C#',
+      'ASP.NET Core',
+      'SignalR',
+      'Entity Framework Core',
+      'Dapper',
+      'PostgreSQL',
+      'Redis',
+      'JWT',
+      'Docker',
+      'GitHub Actions',
+      'xUnit',
+    ],
+    features: [
+      'REST API for auth, profile, user search, dialogs, paginated history and message deletion',
+      'SignalR hub at /hubs/chat: send, ack, typing, delete events and presence',
+      'Idempotent delivery via clientMessageId with a unique (sender_id, client_message_id) index',
+      'ULID keys (varchar(26), "C" collation) for chronological ordering and cursor-based sync',
+      'JWT auth, bcrypt password hashing, rate limiting on auth, strict CORS',
+      'EF Core for rare operations, Dapper for high-frequency message inserts and history reads',
+      'Redis backplane for multi-instance event broadcast',
+      'RFC 7807 problem+json errors and Swagger documentation',
+    ],
+    layers: [
+      {
+        title: 'Transport',
+        text: 'Nginx as a single entry point, REST over HTTPS and a SignalR hub over WSS, with the JWT passed via header or access_token query for WebSocket.',
+      },
+      {
+        title: 'Delivery',
+        text: 'Membership check, idempotency lookup, Dapper insert, backplane publish, then an ack only to the sending connection, so repeats return the same server ULID.',
+      },
+      {
+        title: 'Storage',
+        text: 'PostgreSQL with ULID primary keys, a (dialog_id, id) index for history and delta sync, DB-side timestamps, soft deletes and cascade dialog removal.',
+      },
+      {
+        title: 'Quality',
+        text: 'xUnit unit tests, WebApplicationFactory and Testcontainers integration tests, SignalR client tests, and a GitHub Actions gate that blocks the Render deploy on failure.',
+      },
+    ],
+    metrics: [
+      { value: 'SignalR', label: 'Real-time delivery' },
+      { value: 'ULID', label: 'Time-sortable keys' },
+      { value: 'Idempotent', label: 'Message sending' },
+      { value: 'CI/CD', label: 'Tests gate deploy' },
+    ],
+    github: 'https://github.com/Fozu7916/Messenger1',
+    images: [
+      '/images/Messenger1.png',
+      '/images/Messenger2.png',
+      '/images/Messenger3.png',
+      '/images/Messenger4.png',
+    ],
+    featured: true,
+    status: 'Team MVP, deployed',
+  },
+
+  {
     slug: 'drone-lidar',
     title: 'DroneLiDAR',
     summary:
@@ -81,7 +151,7 @@ export const projects: Project[] = [
       { value: '25M', label: 'Max DEM cells' },
       { value: 'SHA-256', label: 'Result provenance' },
     ],
-    github: 'https://github.com/Fozu7916/DroneLiDAR',
+    github: 'https://github.com/Fozu7916/LidarMVP',
     images: [
       '/images/DroneLiDARFirst.png',
       '/images/DroneLiDARSecond.png',
