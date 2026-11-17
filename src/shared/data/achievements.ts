@@ -48,4 +48,4 @@ export const detailedAchievements = {
       name: 'Young Scientists Solving Current Problems of Science',
     },
   ],
-} as const;
+} as const;

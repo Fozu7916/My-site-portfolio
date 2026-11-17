@@ -80,9 +80,8 @@ export type SocialLink = {
 };
 
 export const socialLinks: SocialLink[] = [
-  { id: 'telegram dm', label: 'Telegram (DM)', href: 'https://t.me/твой_ник', showIn: ['about'] },
-  { id: 'telegram channel', label: 'Telegram channel', href: 'https://t.me/твой_канал', showIn: ['about'] },
+  { id: 'telegram dm', label: 'Telegram (DM)', href: profile.telegramUrl, showIn: ['about'] },
+  { id: 'telegram channel', label: 'Telegram channel', href: profile.telegramChannelUrl, showIn: ['about'] },
   { id: 'github', label: 'GitHub', href: profile.github, showIn: ['about', 'footer'] },
   { id: 'leetcode', label: 'LeetCode', href: profile.leetcode, showIn: ['about', 'footer'] },
-  { id: 'tiktok', label: 'TikTok', href: 'https://www.tiktok.com/@fozu_dev', showIn: ['about', 'footer'] },
 ];

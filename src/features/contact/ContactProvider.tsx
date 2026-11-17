@@ -41,9 +41,10 @@ export function ContactProvider({ children }: PropsWithChildren) {
             <span className="eyebrow">Start a conversation</span>
             <h2 id="contact-title">Let’s build something reliable.</h2>
             <p>I am open to backend engineering roles and technical conversations.</p>
-            <p className="contact-dialog__email">{profile.email}</p>
+            {profile.email && <p className="contact-dialog__email">{profile.email}</p>}
             <div className="contact-dialog__actions">
-              <a className="button button--ghost" href={profile.telegramUrl} target="_blank" rel="noreferrer">Telegram</a>
+              <a className="button button--primary" href={profile.telegramUrl} target="_blank" rel="noreferrer">Write on Telegram</a>
+              {profile.email && <a className="button button--ghost" href={`mailto:${profile.email}`}>Send an email</a>}
             </div>
           </div>
         </div>
@@ -56,4 +57,4 @@ export function useContact() {
   const context = useContext(ContactContext);
   if (!context) throw new Error('useContact must be used inside ContactProvider');
   return context;
-}
+}

@@ -3,9 +3,10 @@
   z-index: 100;
   inset: 0;
   display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
   place-items: center;
-  padding: 24px;
-  background: rgba(10,10,15,.92);
+  padding: 72px 16px max(24px, env(safe-area-inset-bottom));
+  background: rgba(10,10,15,.94);
   backdrop-filter: blur(12px);
 }
 
@@ -13,18 +14,20 @@
   position: relative;
   z-index: 1;
   max-width: min(1100px, 100%);
-  max-height: 82vh;
+  max-height: 100%;
+  object-fit: contain;
   border-radius: var(--radius-inner);
 }
 
 .lightbox__close {
   position: absolute;
   z-index: 2;
-  top: 24px;
-  right: 24px;
-  padding: 10px 18px;
+  top: max(14px, env(safe-area-inset-top));
+  right: 14px;
+  min-height: 44px;
+  padding: 0 20px;
   border: 1px solid var(--mist);
   border-radius: var(--radius-pill);
-  background: transparent;
+  background: rgba(23,23,33,.7);
   cursor: pointer;
 }

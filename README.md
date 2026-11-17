@@ -10,7 +10,7 @@ Live site: [https://fozu-dev.site/](https://fozu-dev.site/)
 - Vite
 - React Router
 - Framer Motion
-- Netlify
+- GitHub Pages
 
 ## Project structure
 
@@ -35,7 +35,7 @@ npm run build
 npm run preview
 ```
 
-Netlify reads `netlify.toml`, builds the app into `dist`, and serves client-side routes through the SPA fallback.
+The site is deployed to GitHub Pages by `.github/workflows/deploy.yml`. GitHub Pages has no SPA fallback, so `npm run build` also copies `dist/index.html` to `dist/404.html` (the `postbuild` script). Pages serves that file for any unknown path, which lets React Router handle deep links such as `/projects` after a refresh.
 
 
 

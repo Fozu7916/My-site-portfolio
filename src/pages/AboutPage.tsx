@@ -30,7 +30,7 @@ export function AboutPage() {
             <p>{profile.role}</p>
           </div>
 
-          <p className="profile-email">{profile.email}</p>
+          {profile.email && <p className="profile-email">{profile.email}</p>}
 
           <div
             className="profile-socials"
@@ -39,7 +39,7 @@ export function AboutPage() {
             {aboutLinks.map((link) => (
               <a
                 key={link.id}
-                className={`profile-social profile-social--${link.id}`}
+                className={`profile-social profile-social--${link.id.replace(/\s+/g, '-')}`}
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
@@ -118,4 +118,4 @@ export function AboutPage() {
       </section>
     </div>
   );
-}
+}

@@ -38,11 +38,13 @@ export function HallOfFamePage() {
             ))}
           </div>
 
-          <ul className="clean-list">
-            {education.english.map((level) => (
-              <li key={level}>{level}</li>
-            ))}
-          </ul>
+          {education.english.length > 0 && (
+            <ul className="clean-list">
+              {education.english.map((level) => (
+                <li key={level}>{level}</li>
+              ))}
+            </ul>
+          )}
         </Reveal>
 
         <Reveal className="content-card">
@@ -93,7 +95,7 @@ export function HallOfFamePage() {
      
     <section className="hof-details">
       <div className="hof-details-header">
-        <span className="eyebrow">BEYOND THE OVERVIEW</span>
+        <span className="eyebrow">Beyond the overview</span>
         <h2>Selected achievements</h2>
       </div>
 
@@ -139,4 +141,4 @@ export function HallOfFamePage() {
 
     </div>
   );
-}
+}

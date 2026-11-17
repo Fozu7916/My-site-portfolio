@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { getProject, getProjectIndex } from '../features/projects/model/projects';
+import { getProject, getProjectIndex, projects } from '../features/projects/model/projects';
 import { ImageLightbox } from '../features/projects/ui/ImageLightbox';
 import { Reveal } from '../shared/ui/Reveal';
 
@@ -13,6 +13,7 @@ export function ProjectDetailPage() {
 
   const index = getProjectIndex(project.slug);
   const status = project.status ?? 'Case study';
+  const nextProject = projects[(projects.findIndex((item) => item.slug === project.slug) + 1) % projects.length];
 
   return (
     <article className="project-detail page-shell">
@@ -42,16 +43,18 @@ export function ProjectDetailPage() {
             <span>Interface gallery</span>
             <span>{String(project.images.length).padStart(2, '0')} screens</span>
           </div>
-          {project.images.map((image, imageIndex) => (
-            <button
-              type="button"
-              data-index={String(imageIndex + 1).padStart(2, '0')}
-              key={image}
-              onClick={() => setSelectedImage(image)}
-            >
-              <img src={image} alt={`${project.title} interface ${imageIndex + 1}`} />
-            </button>
-          ))}
+          <div className="project-gallery__track">
+            {project.images.map((image, imageIndex) => (
+              <button
+                type="button"
+                data-index={String(imageIndex + 1).padStart(2, '0')}
+                key={image}
+                onClick={() => setSelectedImage(image)}
+              >
+                <img src={image} alt={`${project.title} interface ${imageIndex + 1}`} />
+              </button>
+            ))}
+          </div>
         </Reveal>
       )}
 
@@ -91,6 +94,16 @@ export function ProjectDetailPage() {
           ))}
         </div>
       </Reveal>
+
+      {nextProject && nextProject.slug !== project.slug && (
+        <Link className="project-next" to={`/projects/${nextProject.slug}`}>
+          <div>
+            <small>Next project</small>
+            <strong>{nextProject.title}</strong>
+          </div>
+          <span aria-hidden="true">→</span>
+        </Link>
+      )}
 
       <ImageLightbox src={selectedImage} alt={`${project.title} interface`} onClose={() => setSelectedImage(null)} />
     </article>

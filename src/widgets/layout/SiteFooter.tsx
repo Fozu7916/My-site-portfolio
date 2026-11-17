@@ -15,7 +15,7 @@ export function SiteFooter() {
           <p>Backend systems with a clear product surface.</p>
         </div>
         <div className="site-footer__links">
-          <span className="site-footer__email">{profile.email}</span>
+          {profile.email && <span className="site-footer__email">{profile.email}</span>}
           {footerLinks.map((link) => (
             <a key={link.id} href={link.href} target="_blank" rel="noreferrer">
               {link.label}
@@ -29,4 +29,4 @@ export function SiteFooter() {
       </div>
     </footer>
   );
-}
+}
