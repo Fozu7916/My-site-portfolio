@@ -85,5 +85,4 @@ export const socialLinks: SocialLink[] = [
   { id: 'telegram channel', label: 'Telegram channel', href: profile.telegramChannelUrl, showIn: ['about'] },
   { id: 'github', label: 'GitHub', href: profile.github, showIn: ['about', 'footer'] },
   { id: 'leetcode', label: 'LeetCode', href: profile.leetcode, showIn: ['about', 'footer'] },
-  { id: 'tiktok', label: 'TikTok', href: profile.tiktok, showIn: ['about', 'footer'] },
-];
+];
