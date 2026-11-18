@@ -1,3 +1,4 @@
+import { motion, useReducedMotion } from 'framer-motion';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { SiteFooter } from './SiteFooter';
@@ -12,6 +13,7 @@ declare global {
 
 export function AppLayout() {
   const { pathname } = useLocation();
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -21,7 +23,14 @@ export function AppLayout() {
   return (
     <>
       <SiteHeader />
-      <main><Outlet /></main>
+      <motion.main
+        key={pathname}
+        initial={reduceMotion ? false : { opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <Outlet />
+      </motion.main>
       <SiteFooter />
     </>
   );

@@ -40,6 +40,9 @@ export function ProjectsPage() {
             key={item}
           >
             {item}
+            <span className="filter-list__count">
+              {item === 'All' ? projects.length : projects.filter((project) => project.category === item).length}
+            </span>
           </button>
         ))}
       </div>

@@ -17,7 +17,7 @@
 }
 
 .project-card__visual { display: none; }
-.project-card__content { display: flex; min-height: 100%; flex: 1; flex-direction: column; }
+.project-card__content { display: flex; min-height: 0; flex: 1; flex-direction: column; }
 .project-card:focus-within { border-color: rgba(226,227,237,.22); }
 
 .project-card__meta { display: flex; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 13px; }
@@ -53,6 +53,7 @@
 
 .project-card--visual .project-card__visual {
   position: relative;
+  flex: none;
   display: block;
   height: clamp(190px, 22vw, 250px);
   overflow: hidden;

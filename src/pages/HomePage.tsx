@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { featuredProjects } from '../features/projects/model/projects';
 import { ProjectCard } from '../features/projects/ui/ProjectCard';
 import { useContact } from '../features/contact/ContactProvider';
+import { devlogEntries } from '../shared/data/devlog';
+import { profile, skills } from '../shared/data/profile';
 import { Reveal } from '../shared/ui/Reveal';
 
 const principles = [
@@ -21,6 +23,12 @@ const principles = [
     title: 'Consistency compounds',
     text: 'Continuous learning, iterative project development, and the discipline to improve both engineering skills and personal performance.',
   },
+];
+
+const contactLinks = [
+  { label: 'Telegram', value: profile.telegram, href: profile.telegramUrl },
+  { label: 'GitHub', value: 'Fozu7916', href: profile.github },
+  { label: 'LeetCode', value: 'Fozuzzzxxxccc', href: profile.leetcode },
 ];
 
 export function HomePage() {
@@ -110,17 +118,81 @@ export function HomePage() {
       </section>
 
       <section className="section">
-        <Reveal className="cta-card">
-          <span className="eyebrow">Have a challenge?</span>
-          <h2>Let’s turn complexity into a dependable product.</h2>
+        <Reveal className="section-heading">
+          <div>
+            <span className="eyebrow">Stack</span>
+            <h2>What I build with.</h2>
+          </div>
 
-          <button
-            className="button button--primary"
-            type="button"
-            onClick={openContact}
-          >
-            Contact me
-          </button>
+          <Link to="/about">
+            Full profile <span aria-hidden="true">↗</span>
+          </Link>
+        </Reveal>
+
+        <div className="stack-grid">
+          {skills.map((group) => (
+            <Reveal className="stack-row" key={group.category}>
+              <h3>{group.category}</h3>
+              <div className="tag-list">
+                {group.items.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <Reveal className="section-heading">
+          <div>
+            <span className="eyebrow">Devlog</span>
+            <h2>Recent progress.</h2>
+          </div>
+
+          <Link to="/devlog">
+            Full timeline <span aria-hidden="true">↗</span>
+          </Link>
+        </Reveal>
+
+        <div className="recent-list">
+          {devlogEntries.slice(0, 3).map((entry) => (
+            <Reveal key={`${entry.date}-${entry.title}`}>
+              <Link className="recent-item" to="/devlog">
+                <time>{entry.date}</time>
+                <h3>{entry.title}</h3>
+                <p>{entry.text}</p>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <Reveal className="cta-card">
+          <div className="cta-card__copy">
+            <span className="eyebrow">Have a challenge?</span>
+            <h2>Let’s turn complexity into a dependable product.</h2>
+
+            <button
+              className="button button--primary"
+              type="button"
+              onClick={openContact}
+            >
+              Contact me
+            </button>
+          </div>
+
+          <ul className="cta-links">
+            {contactLinks.map((link) => (
+              <li key={link.label}>
+                <a href={link.href} target="_blank" rel="noreferrer">
+                  <span>{link.label}</span>
+                  <span>{link.value} <span aria-hidden="true">↗</span></span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </Reveal>
       </section>
     </>

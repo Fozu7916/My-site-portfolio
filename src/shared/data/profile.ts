@@ -7,6 +7,7 @@ export const profile = {
   telegramChannelUrl: 'https://t.me/+MAwXHuFGbMU4ZjAy',
   github: 'https://github.com/Fozu7916',
   leetcode: 'https://leetcode.com/u/Fozuzzzxxxccc/',
+  tiktok: 'https://www.tiktok.com/@fozu_dev',
   avatar: '/images/avatar.jpg',
 } as const;
 
@@ -84,4 +85,5 @@ export const socialLinks: SocialLink[] = [
   { id: 'telegram channel', label: 'Telegram channel', href: profile.telegramChannelUrl, showIn: ['about'] },
   { id: 'github', label: 'GitHub', href: profile.github, showIn: ['about', 'footer'] },
   { id: 'leetcode', label: 'LeetCode', href: profile.leetcode, showIn: ['about', 'footer'] },
-];
+  { id: 'tiktok', label: 'TikTok', href: profile.tiktok, showIn: ['about', 'footer'] },
+];
